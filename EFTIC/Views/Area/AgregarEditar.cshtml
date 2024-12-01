@@ -1,0 +1,89 @@
+﻿@model EFTIC.Models.Area
+
+@{
+    ViewBag.Title = "AgregarEditar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    List<EFTIC.Models.Sede> sede = ViewBag.Tipo;
+
+}
+
+
+<!--Pesstañas-->
+<nav class="breadcrumb">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="~/Home/Index">Home</a></li>
+        <li class="breadcrumb-item"><a href="~/Area/Index">Area</a></li>
+        <li class="breadcrumb-item active">@(Model.AreaID > 0 ?  Model.Nombre_Area : "Agregar Area")</li>
+    </ol>
+</nav>
+
+
+<div class="card shadow-none border my-4" data-component-card="data-component-card">
+    <div class="card-header p-4 border-bottom bg-body">
+        <center><h2>AGREGAR NUEVA AREA</h2></center>
+    </div>
+
+
+    <div class="card-body p-4">
+
+
+        @using (Html.BeginForm("Guardar", "Area", FormMethod.Post, new { @class = "row gx-1 gy-2 needs-validation", novalidate = "novalidate" }))
+        {
+            <div class="mb-1">
+                @Html.Label("ID Área:", new { @class = "form-label mb-0" })
+                @Html.TextBoxFor(x => x.AreaID, new { @class = "form-control", id = "idArea", placeholder = "ID", @readonly = "readonly" })
+            </div>
+            <div class="mb-1">
+                @Html.Label("Nombre Área:", new { @class = "form-label mb-0" })
+                @Html.TextBoxFor(x => x.Nombre_Area, new { @class = "form-control", id = "nombreArea", placeholder = "Nombre del Área", required = "required" })
+                <div class="invalid-feedback">
+                    Campo obligatorio*
+                </div>
+            </div>
+            <div class="mb-1">
+                @Html.Label("Descripción Área:", new { @class = "form-label mb-0" })
+                @Html.TextAreaFor(x => x.Descripcion_Area, new { @class = "form-control", id = "descripcionArea", placeholder = "Agrega una descripcion de la Area", rows = 4 })
+            </div>
+
+            <div class="form-group mb-3">
+                @Html.Label("Sede:", new { @class = "form-label" })
+                <select name="SedeID" class="form-select">
+                    <option value="">--Seleccione--</option>
+                    @foreach (var t in sede)
+                    {
+                        <option value="@t.SedeID" @(Model.SedeID == t.SedeID ? "selected" : "")>@t.Nombre_Sede</option>
+                    }
+                </select>
+                @Html.ValidationMessageFor(x => x.SedeID, null, new { @class = "label label-danger" })
+            </div>
+
+            <div>
+                <br />
+                <button class="btn btn-phoenix-primary me-1 mb-1" type="submit">Guardar</button>
+                <button class="btn btn-phoenix-danger me-1 mb-1" type="button" onclick="window.location.href='/Area/Index'">Cancelar</button>
+            </div>
+        }
+
+
+    </div>
+</div>
+
+
+<!--Funcionalidad de la alerta de Guardado-->
+<!--<script>
+    (function () {
+        'use strict';
+        var forms = document.querySelectorAll('.needs-validation');
+        Array.prototype.slice.call(forms).forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
+</script>-->
+<!-- fin Funcionalidad de la alerta de Guardado-->

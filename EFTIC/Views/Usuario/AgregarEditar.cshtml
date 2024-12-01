@@ -1,0 +1,170 @@
+﻿@model EFTIC.Models.Usuario
+
+@{
+    ViewBag.Title = "AgregarEditar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    List<EFTIC.Models.Sede> sede = ViewBag.Tipo;
+    List<EFTIC.Models.Area> area = ViewBag.Tipo2;
+
+
+}
+
+
+<!--Pesstañas-->
+<nav class="breadcrumb">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="~/Home/Index">Home</a></li>
+        <li class="breadcrumb-item"><a href="~/Usuario/Index">Usuario</a></li>
+        <li class="breadcrumb-item active">@(Model.UsuarioID > 0 ?  Model.Nombre_Usuario +" " + Model.Apellido_Usuario : "Agregar Usuario")</li>
+    </ol>
+</nav>
+
+<div class="card shadow-none border my-4" data-component-card="data-component-card">
+    <div class="card-header p-4 border-bottom bg-body">
+        <center><h2>AGREGAR NUEVO USUARIO</h2></center>
+    </div>
+
+    <div class="card-body p-4 border-bottom bg-body">
+
+
+        @using (Html.BeginForm("AgregarEditar", "Usuario", FormMethod.Get))
+        {
+            <div class="form-group d-flex align-items-center">
+                @Html.TextBox("dni", Request.QueryString["dni"], new { @class = "form-control me-2", placeholder = "Buscar el DNI" })
+                <button type="submit" class="btn btn-secondary me-1 mb-1">Validar</button>
+            </div>
+        }
+
+        @if (ViewBag.Error != null)
+        {
+            <br />
+            <div class="alert alert-outline-danger">
+                @ViewBag.Error
+            </div>
+        }
+
+
+
+
+
+
+    </div>
+
+    <div class="card-body p-4 ">
+        @using (Html.BeginForm("Guardar", "Usuario", FormMethod.Post, new { @class = "row g-3 needs-validation", novalidate = "novalidate" }))
+        {
+            <div class="col">
+                <div class="mb-3">
+                    @Html.Label("ID Usuario:", new { @class = "form-label" })
+                    @Html.TextBoxFor(x => x.UsuarioID, new { @class = "form-control", id = "idCategoria", placeholder = "ID", @readonly = "readonly" })
+                </div>
+                <div class="mb-3">
+                    @Html.Label("Nombre Usuario:", new { @class = "form-label" })
+                    @Html.TextBoxFor(x => x.Nombre_Usuario, new { @class = "form-control", id = "nombreCategoria", placeholder = "Nombre del Usuario", required = "required", @readonly = "readonly" })
+                    <div class="invalid-feedback">
+                        Llenar campo
+                    </div>
+                </div>
+                <div class="mb-3">
+                    @Html.Label("Apellidos Usuario:", new { @class = "form-label" })
+                    @Html.TextBoxFor(x => x.Apellido_Usuario, new { @class = "form-control", id = "apellidoCategoria", placeholder = "Apellidos Usuario", required = "required", @readonly = "readonly" })
+                    <div class="invalid-feedback">
+                        Llenar campo
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    @Html.Label("Sede:", new { @class = "form-label" })
+                    <select name="SedeID" class="form-select">
+                        <option value="">--Seleccione--</option>
+                        @foreach (var t in sede)
+                        {
+                            <option value="@t.SedeID" @(Model.SedeID == t.SedeID ? "selected" : "")>@t.Nombre_Sede</option>
+                        }
+                    </select>
+                    @Html.ValidationMessageFor(x => x.SedeID, null, new { @class = "label label-danger" })
+                </div>
+
+            </div>
+
+            <div class="col">
+                <div class="mb-3">
+                    @Html.Label("N.Documento:", new { @class = "form-label" })
+                    @Html.TextBoxFor(x => x.DNI, new { @class = "form-control", id = "dniCategoria", placeholder = "Documento Identidad o Ruc", required = "required", @readonly = "readonly" })
+                    <div class="invalid-feedback">
+                        Llenar campo
+                    </div>
+                </div>
+                <div class="mb-3">
+                    @Html.Label("Email:", new { @class = "form-label" })
+                    @Html.TextBoxFor(x => x.Correo, new { @class = "form-control", id = "correoCategoria", placeholder = "Correo Electronico Usuario", required = "required" })
+                    <div class="invalid-feedback">
+                        Llenar campo
+                    </div>
+                </div>
+
+
+                <div class="mb-3">
+                    @Html.Label("Tipo de Usuario:", new { @class = "form-label " })
+                    @Html.DropDownListFor(x => x.TipoUsuario, new SelectList(new List<SelectListItem> {
+                        new SelectListItem { Text = "SOPORTE", Value = "SOPORTE" },
+                        new SelectListItem { Text = "EMPLEADO", Value = "EMPLEADO" }
+                    }, "Value", "Text"), new { @class = "form-control form-select", id = "tipoUsuarioCategoria", required = "required" })
+                    <div class="invalid-feedback">
+                        Seleccione un tipo de usuario
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    @Html.Label("Área:", new { @class = "form-label" })
+                    <select id="areaSelect" name="AreaID" class="form-select">
+                        <option value="">--Seleccione--</option>
+                        @foreach (var t in area)
+                        {
+                            <option value="@t.AreaID" @(Model.AreaID == t.AreaID ? "selected" : "")>@t.Nombre_Area</option>
+                        }
+                    </select>
+                    @Html.ValidationMessageFor(x => x.AreaID, null, new { @class = "label label-danger" })
+                </div>
+
+            </div>
+
+            <div class="mb-3">
+                @Html.Label("Contraseña:", new { @class = "form-label" })
+                @Html.TextBoxFor(x => x.Password, new { @class = "form-control", id = "passwordCategoria", type = "password", placeholder = "Ingrese contraseña" })
+
+            </div>
+
+            <div>
+                <button class="btn btn-phoenix-primary me-1 mb-1" type="submit">Guardar</button>
+                <button class="btn btn-phoenix-danger me-1 mb-1" type="button" onclick="window.location.href='/Usuario/Index'">Cancelar</button>
+            </div>
+        }
+    </div>
+
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Obtener elementos
+        const tipoUsuarioSelect = document.getElementById('tipoUsuarioCategoria');
+        const passwordField = document.getElementById('passwordCategoria').closest('.mb-3');
+
+        // Función para mostrar u ocultar la caja de contraseña
+        function togglePasswordField() {
+            if (tipoUsuarioSelect.value === 'EMPLEADO') {
+                passwordField.style.display = 'none';
+            } else {
+                passwordField.style.display = 'block';
+            }
+        }
+
+        // Ejecutar la función al cambiar el valor del combo
+        tipoUsuarioSelect.addEventListener('change', togglePasswordField);
+
+        // Ejecutar la función en la carga inicial para manejar valores preseleccionados
+        togglePasswordField();
+    });
+</script>

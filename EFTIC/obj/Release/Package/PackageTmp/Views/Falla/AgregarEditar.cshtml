@@ -1,0 +1,54 @@
+﻿@model EFTIC.Models.Falla
+
+@{
+    ViewBag.Title = "AgregarEditar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!--Pesstañas-->
+<nav class="breadcrumb">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="~/Home/Index">Home</a></li>
+        <li class="breadcrumb-item"><a href="~/Falla/Index">Falla</a></li>
+        <li class="breadcrumb-item active">@(Model.FallaID > 0 ?  Model.Nombre_Falla : "Agregar Falla Reportada")</li>
+    </ol>
+</nav>
+
+
+<div class="card shadow-none border my-4" data-component-card="data-component-card">
+    <div class="card-header p-4 border-bottom bg-body">
+        <center><h2>AGREGAR NUEVA FALLA REPORTDA</h2></center>
+    </div>
+
+
+    <div class="card-body p-4">
+
+
+        @using (Html.BeginForm("Guardar", "Falla", FormMethod.Post, new { @class = "row gx-1 gy-2 needs-validation", novalidate = "novalidate" }))
+        {
+            <div class="mb-1">
+                @Html.Label("ID Falla reportada:", new { @class = "form-label mb-0" })
+                @Html.TextBoxFor(x => x.FallaID, new { @class = "form-control", id = "idArea", placeholder = "ID", @readonly = "readonly" })
+            </div>
+            <div class="mb-1">
+                @Html.Label("Nombre Falla reportada:", new { @class = "form-label mb-0" })
+                @Html.TextBoxFor(x => x.Nombre_Falla, new { @class = "form-control", id = "nombreArea", placeholder = "Nombre de la Falla reportada", required = "required" })
+                <div class="invalid-feedback">
+                    Campo obligatorio*
+                </div>
+            </div>
+            <div class="mb-1">
+                @Html.Label("Descripción Falla reportada:", new { @class = "form-label mb-0" })
+                @Html.TextAreaFor(x => x.Descripcion_Falla, new { @class = "form-control", id = "descripcionArea", placeholder = "Descripción de la Falla reportada" , rows = 4 })
+            </div>
+            <div>
+                <br />
+                <button class="btn btn-phoenix-primary me-1 mb-1" type="submit">Guardar</button>
+                <button class="btn btn-phoenix-danger me-1 mb-1" type="button" onclick="window.location.href='/Falla/Index'">Cancelar</button>
+            </div>
+        }
+
+
+    </div>
+</div>

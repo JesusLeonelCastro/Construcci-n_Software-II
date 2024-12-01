@@ -1,0 +1,129 @@
+﻿@model EFTIC.Models.Equipo_Retirado
+
+@{
+    ViewBag.Title = "AgregarEditar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+
+<!--Pesstañas-->
+<nav class="breadcrumb">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="~/Home/Index">Home</a></li>
+        <li class="breadcrumb-item"><a href="~/Equipo_Retirado/Index">Equipo Retirado</a></li>
+        <li class="breadcrumb-item active">@(Model.Equipo_RetiradosID > 0 ?  Model.Nombre_Equipo : "Agregar Equipo")</li>
+    </ol>
+</nav>
+
+
+<div class="card shadow-none border my-4" data-component-card="data-component-card">
+    <div class="card-header p-4 border-bottom bg-body">
+        <center><h2>AGREGAR EQUIPO RETIRADO</h2></center>
+    </div>
+
+
+    <div class="card-body p-4">
+
+
+        @using (Html.BeginForm("Guardar", "Equipo_Retirado", FormMethod.Post, new { @class = "row gx-1 gy-2 needs-validation", novalidate = "novalidate" }))
+        {
+            <div class="row">
+                <div class="col">
+                    <div class="mb-1">
+                        @Html.Label("ID Equipo:", new { @class = "form-label mb-0" })
+                        @Html.TextBoxFor(x => x.Equipo_RetiradosID, new { @class = "form-control", id = "idArea", placeholder = "ID", @readonly = "readonly" })
+                    </div>
+                    <div class="mb-1">
+                        @Html.Label("Tipo equipo:", new { @class = "form-label mb-0" })
+                        @Html.TextBoxFor(x => x.Tipo, new { @class = "form-control", id = "descripcionArea", placeholder = "Ingrese Descripción del Tipo de equipo" })
+                    </div>
+
+
+
+                    <div class="mb-1">
+                        @Html.Label("Nombre equipo:", new { @class = "form-label mb-0" })
+                        @Html.TextBoxFor(x => x.Nombre_Equipo, new { @class = "form-control", id = "nombreArea", placeholder = "Nombre del Equipo", required = "required" })
+                        <div class="invalid-feedback">
+                            Campo obligatorio*
+                        </div>
+                    </div>
+
+                    <div class="mb-1">
+                        @Html.Label("Marca equipo:", new { @class = "form-label mb-0" })
+                        @Html.TextBoxFor(x => x.Marca, new { @class = "form-control", id = "descripcionArea", placeholder = "Ingrese Marca del equipo", required = "required" })
+                        <div class="invalid-feedback">
+                            Campo obligatorio*
+                        </div>
+                    </div>
+                    <div class="mb-1">
+                        @Html.Label("Modelo equipo:", new { @class = "form-label mb-0" })
+                        @Html.TextBoxFor(x => x.Modelo, new { @class = "form-control", id = "descripcionArea", placeholder = "Ingrese Modelo del equipo", required = "required" })
+                        <div class="invalid-feedback">
+                            Campo obligatorio*
+                        </div>
+                    </div>
+
+                    <div class="mb-1">
+                        @Html.Label("Color Equipo:", new { @class = "form-label mb-0" })
+                        @Html.TextBoxFor(x => x.Color, new { @class = "form-control", id = "descripcionArea", placeholder = "Ingrese Color del equipo", required = "required" })
+                        <div class="invalid-feedback">
+                            Campo obligatorio*
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="mb-1">
+                        @Html.Label("N.Serie Equipo:", new { @class = "form-label mb-0" })
+                        @Html.TextBoxFor(x => x.Serie, new { @class = "form-control", id = "descripcionArea", placeholder = "Ingrese Numero de serie del equipo", required = "required" })
+                        <div class="invalid-feedback">
+                            Campo obligatorio*
+                        </div>
+                    </div>
+                    <div class="mb-1">
+                        @Html.Label("Codigo patrimonial Equipo:", new { @class = "form-label mb-0" })
+                        @Html.TextBoxFor(x => x.Cod_Patrimonial, new { @class = "form-control", id = "descripcionArea", placeholder = "Ingrese Codigo patrimonial del quipo", required = "required" })
+                        <div class="invalid-feedback">
+                            Campo obligatorio*
+                        </div>
+                    </div>
+                    <div class="mb-1">
+                        @Html.Label("Codigo interno Equipoo:", new { @class = "form-label mb-0" })
+                        @Html.TextBoxFor(x => x.Codigo_Interno, new { @class = "form-control", id = "descripcionArea", placeholder = "Ingrese Codigo interno del equipo", required = "required" })
+                        <div class="invalid-feedback">
+                            Campo obligatorio*
+                        </div>
+                    </div>
+
+                    <div class="mb-1">
+                        @Html.Label("Mantenimiento (referencia):", new { @class = "form-label mb-0" })
+                        @Html.TextBoxFor(x => x.Sub_Tipo, new { @class = "form-control", id = "descripcionArea", placeholder = "Ultimo matenimiento , Mes , dia o año" })
+                    </div>
+
+                    <div class="mb-1">
+                        @Html.Label("Observaciones Equipo:", new { @class = "form-label mb-0" })
+                        @Html.TextAreaFor(x => x.Observaciones, new { @class = "form-control", id = "descripcionArea", placeholder = "Ingrese observaciones del equipo" })
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+            <div class="mb-3">
+                @Html.Label("Fecha Ingreso Equipo:", new { @class = "form-label" })
+                @Html.TextBoxFor(x => x.Ingreso, new { @class = "form-control", @type = "date", id = "fechaInforme", value = DateTime.Now.ToString("yyyy-MM-dd"), required = "required" })
+                <div class="invalid-feedback">Llenar campo</div>
+            </div>
+
+            <div>
+                <br />
+                <button class="btn btn-phoenix-primary me-1 mb-1" type="submit">Guardar</button>
+                <button class="btn btn-phoenix-danger me-1 mb-1" type="button" onclick="window.location.href='/Equipo_Retirado/Index'">Cancelar</button>
+            </div>
+        }
+
+
+    </div>
+</div>

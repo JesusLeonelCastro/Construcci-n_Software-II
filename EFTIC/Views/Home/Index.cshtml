@@ -1,0 +1,486 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+</head>
+
+
+<body>
+
+    <div class="container">
+        <div class="row">
+
+            <!-- Gráfico Total de Informes -->
+            <div class="col-md-12">
+                <div class="card shadow-none border my-4">
+                    <div class="card-header p-4 border-bottom bg-body">
+                        <center>
+                            <h3>TOTAL DE INFORMES TECNICOS POR AREA</h3>
+                        </center>
+                    </div>
+                    <div id="chart-container1" style="width: 100%; height: 500px;"></div>
+                </div>
+            </div>
+
+            <!-- Gráfico Total de Informes por Sede -->
+            <div class="col-md-6">
+                <div class="card shadow-none border my-4">
+                    <div class="card-header p-4 border-bottom bg-body">
+                        <center>
+                            <h3>INFORMES TECNICOS POR SEDE</h3>
+                        </center>
+                    </div>
+                    <div id="chart-container2" style="width: 100%; height: 500px;"></div>
+                </div>
+            </div>
+
+            <!-- Gráfico Total de Informes por Sede -->
+            <div class="col-md-6">
+                <div class="card shadow-none border my-4">
+                    <div class="card-header p-4 border-bottom bg-body">
+                        <center>
+                            <h3>INFORMES TECNICOS POR TIPO EQUIPO</h3>
+                        </center>
+                    </div>
+                    <div id="chart-container3" style="width: 100%; height: 500px;"></div>
+                </div>
+            </div>
+
+            <!-- Gráfico de Barras -->
+            <div class="col-md-12">
+                <div class="card shadow-none border my-4">
+                    <div class="card-header p-4 border-bottom bg-body">
+                        <center>
+                            <h3>TOTAL DE REGISTROS POR MODULOS</h3>
+                        </center>
+                    </div>
+                    <div id="chart-container" style="width: 100%; height: 500px;"></div>
+                </div>
+            </div>
+
+            <!-- Gráfico Total de Inventario -->
+            <div class="col-md-12">
+                <div class="card shadow-none border my-4">
+                    <div class="card-header p-4 border-bottom bg-body">
+                        <center>
+                            <h3>TOTAL DE INFORMES INVENTARIO POR AREA</h3>
+                        </center>
+                    </div>
+                    <div id="chart-container5" style="width: 100%; height: 500px;"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="https://fastly.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+
+
+    <script>
+        // Obtener los datos desde ViewBag
+        var informesPorArea = @Html.Raw(Json.Encode(ViewBag.InformesPorArea));
+
+        // Inicializar el gráfico de torta
+        var domPie = document.getElementById("chart-container1");
+        var myChartPie = echarts.init(domPie);
+
+        var optionPie = {
+            title: {
+                text: '',
+                left: 'center',
+                textStyle: {
+                    fontSize: 14,
+                    fontWeight: 'normal',
+                    color: '#2c3e50' // Color de título minimalista
+                }
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: '{a} <br/>{b}: {c} ({d}%)'
+            },
+            legend: {
+                orient: 'vertical',
+                left: 'left',
+                textStyle: {
+                    fontSize: 14,
+                    fontWeight: 'normal',
+                    color: '#2c3e50' // Color de etiquetas de la leyenda minimalista
+                }
+            },
+            series: [
+                {
+                    name: 'TOTAL DE INFORMES',
+                    type: 'pie',
+                    radius: '50%',
+                    data: informesPorArea.map(function(item) {
+                        return { value: item.Total, name: item.NombreArea };
+                    }),
+                    emphasis: {
+                        itemStyle: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    },
+                    itemStyle: {
+                        color: function(params) {
+                            // Colores minimalistas para cada segmento
+                            var colorList = [
+                                '#3498db', // Azul claro
+                                '#1abc9c', // Verde agua
+                                '#f1c40f', // Amarillo
+                                '#e74c3c', // Rojo
+                                '#9b59b6', // Púrpura
+                                '#34495e', // Gris oscuro
+                                '#2ecc71'  // Verde
+                            ];
+                            return colorList[params.dataIndex % colorList.length];
+                        }
+                    },
+                    label: {
+                        show: true,
+                        fontSize: 14,
+                        fontWeight: 'bold',
+                        color: '#2c3e50' // Color de etiquetas de datos minimalista
+                    }
+                }
+            ]
+        };
+
+        myChartPie.setOption(optionPie);
+
+        window.addEventListener('resize', function () {
+            myChartPie.resize();
+        });
+    </script>
+
+
+
+    <script>
+    // Obtener los datos desde ViewBag para informes por sede
+    var informesPorSede = @Html.Raw(Json.Encode(ViewBag.InformesPorSede));
+
+    // Inicializar el gráfico de pastel para informes por sede
+    var domPieSede = document.getElementById("chart-container2");
+    var myChartPieSede = echarts.init(domPieSede);
+
+    var optionPieSede = {
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b}: {c} ({d}%)'
+        },
+        legend: {
+            orient: 'vertical',
+
+            left: 'left',
+            textStyle: {
+                fontSize: 14,
+                fontWeight: 'normal', // Texto sin negrita
+                color: '#2c3e50' // Color de etiquetas de la leyenda minimalista
+            }
+        },
+        series: [
+            {
+                name: 'TOTAL DE INFORMES',
+                type: 'pie',
+                radius: ['40%', '70%'],
+                avoidLabelOverlap: false,
+                itemStyle: {
+                    borderRadius: 10,
+                    borderColor: '#fff',
+                    borderWidth: 2
+                },
+                label: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                        fontSize: 20,
+                        fontWeight: 'normal' // Sin negrita
+                    }
+                },
+                labelLine: {
+                    show: false
+                },
+                data: informesPorSede.map(function(item) {
+                    return { value: item.Total, name: item.NombreSede };
+                })
+            }
+        ]
+    };
+
+    myChartPieSede.setOption(optionPieSede);
+
+    window.addEventListener('resize', function () {
+        myChartPieSede.resize();
+    });
+    </script>
+
+
+
+    <script>
+    // Obtener los datos desde ViewBag para informes por tipo de equipo
+    var totalTipoEquiposs = @Html.Raw(Json.Encode(ViewBag.TotalTipoEquiposs));
+
+    // Mapear los datos para el gráfico
+    var data = totalTipoEquiposs.map(function(item) {
+        return {
+            value: item.Total,
+            name: item.Tipo
+        };
+    });
+
+    // Inicializar el gráfico de pastel para informes por tipo de equipo
+    var dom = document.getElementById("chart-container3");
+    var myChart = echarts.init(dom);
+
+    var option = {
+        title: {
+            text: '',
+            left: 'center',
+            textStyle: {
+                fontSize: 24,
+                fontWeight: 'normal', // Sin negrita
+                color: '#2c3e50' // Color de título minimalista
+            }
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b}: {c} ({d}%)'
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+            textStyle: {
+                fontSize: 14,
+                fontWeight: 'normal', // Texto sin negrita
+                color: '#2c3e50' // Color de etiquetas de la leyenda minimalista
+            }
+        },
+        series: [{
+            name: 'TOTAL DE INFORMES',
+            type: 'pie',
+            radius: ['40%', '70%'],
+            avoidLabelOverlap: false,
+            itemStyle: {
+                borderRadius: 10,
+                borderColor: '#fff',
+                borderWidth: 2
+            },
+            label: {
+                show: false,
+                position: 'center'
+            },
+            emphasis: {
+                label: {
+                    show: true,
+                    fontSize: 20,
+                    fontWeight: 'normal', // Sin negrita
+                    color: '#2c3e50' // Color de etiquetas de datos minimalista
+                }
+            },
+            labelLine: {
+                show: false
+            },
+            data: data
+        }]
+    };
+
+    myChart.setOption(option);
+
+    window.addEventListener('resize', function () {
+        myChart.resize();
+    });
+    </script>
+
+
+
+    <script>
+    // Obtener los datos desde ViewBag
+    var data = {
+        informes: @ViewBag.TotalInformes,
+        fallas: @ViewBag.TotalFallas,
+        actividades: @ViewBag.TotalActividades,
+        sedes: @ViewBag.TotalSedes,
+        tiposEquipos: @ViewBag.TotalTiposEquipos,
+        estados: @ViewBag.TotalEstados,
+        areas: @ViewBag.TotalAreas
+    };
+
+    // Inicializar el gráfico de barras
+    var dom = document.getElementById("chart-container");
+    var myChart = echarts.init(dom);
+
+    var option = {
+        title: {
+            text: '',
+            left: 'center',
+            textStyle: {
+                fontSize: 24,
+                fontWeight: 'normal',
+                color: '#2c3e50' // Color de título minimalista
+            }
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
+        xAxis: {
+            type: 'category',
+            data: ['Informes', 'Fallas', 'Actividades', 'Sedes', 'Tipos Equipos', 'Estados', 'Áreas'],
+            axisLabel: {
+                fontSize: 14,
+                fontWeight: 'bold',
+                color: '#2c3e50' // Color de etiquetas de eje X minimalista
+            }
+        },
+        yAxis: {
+            type: 'value',
+            axisLabel: {
+                fontSize: 14,
+                fontWeight: 'bold',
+                color: '#2c3e50' // Color de etiquetas de eje Y minimalista
+            }
+        },
+        series: [{
+            data: [
+                data.informes,
+                data.fallas,
+                data.actividades,
+                data.sedes,
+                data.tiposEquipos,
+                data.estados,
+                data.areas
+            ],
+            type: 'bar',
+            itemStyle: {
+                color: function(params) {
+                    // Colores minimalistas para cada barra
+                    var colorList = [
+                        '#3498db', // Azul claro
+                        '#1abc9c', // Verde agua
+                        '#f1c40f', // Amarillo
+                        '#e74c3c', // Rojo
+                        '#9b59b6', // Púrpura
+                        '#2ecc71', // Gris oscuro 2ecc71
+                        '#34495e'  // Verde 34495e
+                    ];
+                    return colorList[params.dataIndex];
+                }
+            },
+            label: {
+                show: true,
+                position: 'top',
+                fontSize: 14,
+                fontWeight: 'bold',
+                color: '#2c3e50' // Color de etiquetas de datos minimalista
+            }
+        }]
+    };
+
+    myChart.setOption(option);
+
+    window.addEventListener('resize', function () {
+        myChart.resize();
+    });
+    </script>
+
+
+    <script>
+    // Obtener los datos desde ViewBag
+    var informesPorArea = @Html.Raw(Json.Encode(ViewBag.inventarioPorArea));
+
+    // Inicializar el gráfico de torta
+    var domPie = document.getElementById("chart-container5");
+    var myChartPie = echarts.init(domPie);
+
+    var optionPie = {
+        title: {
+            text: '',
+            left: 'center',
+            textStyle: {
+                fontSize: 14,
+                fontWeight: 'normal',
+                color: '#2c3e50' // Color de título minimalista
+            }
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b}: {c} ({d}%)'
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+            textStyle: {
+                fontSize: 14,
+                fontWeight: 'normal',
+                color: '#2c3e50' // Color de etiquetas de la leyenda minimalista
+            }
+        },
+        series: [
+            {
+                name: 'TOTAL DE INVENTARIO',
+                type: 'pie',
+                radius: ['40%', '70%'],  // Establece el rango del gráfico de torta
+                center: ['50%', '70%'],  // Ajusta la posición del gráfico
+                startAngle: 180,         // Ángulo de inicio (semi-circular)
+                endAngle: 360,           // Ángulo de fin (semi-circular)
+                data: informesPorArea.map(function(item) {
+                    return { value: item.Total, name: item.NombreArea };
+                }),
+                emphasis: {
+                    itemStyle: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                },
+                itemStyle: {
+                    color: function(params) {
+                        // Colores minimalistas para cada segmento
+                        var colorList = [
+                            '#3498db', // Azul claro
+                            '#1abc9c', // Verde agua
+                            '#f1c40f', // Amarillo
+                            '#e74c3c', // Rojo
+                            '#9b59b6', // Púrpura
+                            '#34495e', // Gris oscuro
+                            '#2ecc71'  // Verde
+                        ];
+                        return colorList[params.dataIndex % colorList.length];
+                    }
+                },
+                label: {
+                    show: true,
+                    fontSize: 14,
+                    fontWeight: 'bold',
+                    color: '#2c3e50' // Color de etiquetas de datos minimalista
+                }
+            }
+        ]
+    };
+
+    myChartPie.setOption(optionPie);
+
+    window.addEventListener('resize', function () {
+        myChartPie.resize();
+    });
+    </script>
+
+
+
+
+
+</body>
+</html>
+

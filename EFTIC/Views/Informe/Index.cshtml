@@ -1,0 +1,569 @@
+﻿@model List<EFTIC.Models.Informes>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+
+
+@if (TempData["AlertarGuardar"] != null) //Alerta de Guardar
+{
+    <div class="alert alert-outline-success d-flex align-items-center" role="alert">
+        <span class="fas fa-check-circle text-success fs-5 me-3"></span>
+        <p class="mb-0 flex-1">@TempData["AlertarGuardar"]</p>
+        <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+@if (TempData["AlertarEliminar"] != null) //Alerta de Eliminar
+{
+    <div class="alert alert-outline-warning d-flex align-items-center" role="alert">
+        <span class="fas fa-check-circle text-warning fs-5 me-3"></span>
+        <p class="mb-0 flex-1">@TempData["AlertarEliminar"]</p>
+        <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+
+<div class="card shadow-none border my-4" data-component-card="data-component-card">
+    <div class="card-header p-4 border-bottom bg-body">
+
+        <center><h2>GESTION INFORMES TECNICOS</h2></center>
+    </div>
+    <div class="card-body p-4">
+        <!--Contenerdor Card-->
+        <div id="tableExample3" data-list='{"valueNames":["name","email","age"],"page":20,"pagination":true}'>
+
+            <!--Tabla-->
+            <div class="search-box mb-3 d-flex justify-content-start align-items-center">
+                <button class="btn btn-phoenix-primary me-3 mb-1" type="button" onclick="window.location.href='AgregarEditar'">Agregar</button>
+
+            </div>
+
+            <form class="position-relative d-flex">
+                <input class="form-control search-input search form-control-sm" type="search" id="searchInput" placeholder="Buscar" aria-label="Search">
+            </form>
+
+
+
+            <br />
+            <div class="table-responsive">
+                <table class="table table-striped table-sm fs-9 mb-0 display">
+                    <thead>
+                        <tr>
+                            <th class="sort border-top border-translucent ps-3" data-sort="name">Id</th>
+                            <th class="sort border-top" data-sort="email">Area</th>
+
+                            <th class="sort border-top" data-sort="email">Titulo</th>
+                            <th class="sort border-top" data-sort="email">Fecha Solicitud</th>
+                            <th class="sort border-top" data-sort="email">Fecha Informe</th>
+                            <th class="sort border-top" data-sort="email">Diagnostico</th>
+                            <th class="sort border-top" data-sort="email">Solucion Primaria</th>
+                            <th class="sort border-top" data-sort="email">Sede</th>
+
+                            <th class="sort border-top" data-sort="email">Tipo Equipo</th>
+                            @*<th class="sort border-top" data-sort="email">Equipo ID</th>
+                                <th class="sort border-top" data-sort="email">Falla ID</th>
+                                <th class="sort border-top" data-sort="email">O.Acividaddes ID</th>
+                                <th class="sort border-top" data-sort="email">Estado ID</th>*@
+
+
+                            <th class="sort text-center align-middle pe-0 border-top" scope="col">Accion</th>
+
+                        </tr>
+                    </thead>
+                    <tbody class="list">
+
+                        @foreach (var m in Model)
+                        {
+                            <tr class="table-row" data-category="@m.Area?.Nombre_Area?.ToLower() ?? " Area no disponible"">
+                            <tr class="table-row" data-category="@m.Sede?.Nombre_Sede?.ToLower() ?? " Sede no disponible"">
+                            <tr class="table-row" data-category="@m.Tipo_Equipo?.Nombre?.ToLower() ?? " Tipo Equipo no disponible"">
+                            <tr class="table-row" data-category="@m.Equipo_Retirado?.Nombre_Equipo?.ToLower() ?? " Esquipo no disponible"">
+                            <tr class="table-row" data-category="@m.Falla?.Nombre_Falla?.ToLower() ?? " Falla no disponible"">
+                            <tr class="table-row" data-category="@m.O_Actividades?.Nombre_O_Actividades?.ToLower() ?? " Actividad no disponible"">
+                            <tr class="table-row" data-category="@m.Estados?.Nombre_Estado?.ToLower() ?? " Estao no disponible"">
+
+                                <td class="align-middle ps-3 name">@m.InformeID</td>
+                                <td class="align-middle email">
+                                    @if (m.Area != null)
+                                    {
+                                        @m.Area.Nombre_Area
+                                    }
+                                    else
+                                    {
+                                        <span>Area no disponible</span>
+                                    }
+                                </td>
+                                <td class="align-middle email">@m.Titulo</td>
+
+                                <td class="align-middle email">
+                                    @(m.Fecha_Solicitud.HasValue ? m.Fecha_Solicitud.Value.ToString("yyyy-MM-dd") : "")
+                                </td>
+                                <td class="align-middle email">
+                                    @(m.Fecha_Informe.HasValue ? m.Fecha_Informe.Value.ToString("yyyy-MM-dd") : "")
+                                </td>
+                                <td class="align-middle email">@m.Diagnostico</td>
+                                <td class="align-middle email">@m.Solucion_Primaria</td>
+
+
+
+
+
+
+                                <td class="align-middle email">
+                                    @if (m.Sede != null)
+                                    {
+                                        @m.Sede.Nombre_Sede
+                                    }
+                                    else
+                                    {
+                                        <span>Sede no disponible</span>
+                                    }
+                                </td>
+
+                                <td class="align-middle email">
+                                    @if (m.Tipo_Equipo != null)
+                                    {
+                                        @m.Tipo_Equipo.Nombre_Tipo_Equipo
+                                    }
+                                    else
+                                    {
+                                        <span>Tipo de equipo no disponible</span>
+                                    }
+                                </td>
+
+                                @*<td class="align-middle email category-column">
+                                        @if (m.Equipo != null)
+                                        {
+                                            @m.Equipo.Nombre_Equipo
+                                        }
+                                        else
+                                        {
+                                            <span>Equipo no disponible</span>
+                                        }
+                                    </td>
+
+                                    <td class="align-middle email category-column">
+                                        @if (m.Falla != null)
+                                        {
+                                            @m.Falla.Nombre_Falla
+                                        }
+                                        else
+                                        {
+                                            <span>Falla no disponible</span>
+                                        }
+                                    </td>
+
+                                    <td class="align-middle email category-column">
+                                        @if (m.O_Actividades != null)
+                                        {
+                                            @m.O_Actividades.Nombre_O_Actividad
+                                        }
+                                        else
+                                        {
+                                            <span>Actividades no disponible</span>
+                                        }
+                                    </td>
+
+                                    <td class="align-middle email category-column">
+                                        @if (m.Estados != null)
+                                        {
+                                            @m.Estados.Nombre_Estado
+                                        }
+                                        else
+                                        {
+                                            <span>Estado no disponible</span>
+                                        }
+                                    </td>*@
+
+                                <td class="align-middle white-space-nowrap text-center pe-0">
+
+
+
+
+
+
+                                    <!-- Botón "Generar PDF" -->
+                                    <button class="btn btn-subtle-danger me-1 mb-1" type="button" onclick="generarPDF(@m.InformeID)">
+                                        <span class="text" data-feather="file-text" style="height: 15px; width: 15px;"></span>
+                                    </button>
+
+                                    <script>
+                                    function generarPDF(informeID) {
+                                        window.location.href = '@Url.Action("GenerarPDF", "Informe")' + '?informeID=' + informeID;
+                                    }
+                                    </script>
+
+
+
+                                    <!-- Botón "Ver" -->
+                                    <button class="btn btn-phoenix-info me-1 mb-1" type="button" data-bs-toggle="modal" title="Ver" data-bs-target="#modalVer-@m.InformeID">
+                                        <span class="text" data-feather="eye" style="height: 15px; width: 15px;"></span>
+                                    </button>
+
+                                    <!-- Modal "Ver" -->
+
+                                    <div class="modal fade text-start" id="modalVer-@m.InformeID" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modalVerLabel-@m.InformeID" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header justify-content-between bg-primary">
+                                                    <h5 class="modal-title text-white dark__text-gray-1100" id="modalVerLabel-@m.InformeID">Detalles Informe Tecnico </h5>
+                                                    <button class="btn p-1" type="button" data-bs-dismiss="modal" aria-label="Close">
+                                                        <svg class="svg-inline--fa fa-xmark fs-9 text-white dark__text-gray-1100" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                                                            <path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="card-body p-4">
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-3">
+                                                            <label class="form-label" for="modal-id">ID Informe</label>
+                                                            <input class="form-control" id="modal-id" type="text" value="@m.InformeID" readonly>
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <label class="form-label" for="modal-nombre">Titulo</label>
+                                                            <input class="form-control" id="modal-nombre" type="text" value="@m.Titulo" readonly>
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <label class="form-label" for="modal-descripcion">Fecha solicitada</label>
+                                                            <input class="form-control" id="modal-descripcion" type="text" value="@(m.Fecha_Solicitud.HasValue ? m.Fecha_Solicitud.Value.ToString("yyyy-MM-dd") : string.Empty)" readonly>
+                                                        </div>
+
+                                                        <div class="col-md-6 mb-3">
+                                                            <label class="form-label" for="modal-descripcion">Fecha Informe</label>
+                                                            <input class="form-control" id="modal-descripcion" type="text" value="@(m.Fecha_Informe.HasValue ? m.Fecha_Informe.Value.ToString("yyyy-MM-dd") : string.Empty)" readonly>
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <label class="form-label" for="modal-diagnostico">Diagnóstico</label>
+                                                            <textarea class="form-control" id="modal-diagnostico" rows="3" readonly>@m.Diagnostico</textarea>
+                                                        </div>
+
+                                                        <div class="col-md-6 mb-3">
+                                                            <label class="form-label" for="modal-solucion">Solución</label>
+                                                            <textarea class="form-control" id="modal-solucion" rows="3" readonly>@m.Solucion_Primaria</textarea>
+                                                        </div>
+
+                                                        <div class="col-md-6 mb-3">
+                                                            <label class="form-label" for="modal-categoria">Area</label>
+                                                            <input class="form-control" id="modal-categoria" type="text" value="@(m.Area != null ? m.Area.Nombre_Area : "Area no disponible")" readonly>
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <label class="form-label" for="modal-categoria">Sede</label>
+                                                            <input class="form-control" id="modal-categoria" type="text" value="@(m.Area != null ? m.Sede.Nombre_Sede : "Sede no disponible")" readonly>
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <label class="form-label" for="modal-categoria">Tipo Equipo</label>
+                                                            <input class="form-control" id="modal-categoria" type="text" value="@(m.Tipo_Equipo != null ? m.Tipo_Equipo.Nombre_Tipo_Equipo : "Tipo Equipo no disponible")" readonly>
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <label class="form-label" for="modal-categoria">Fallas Reportadas</label>
+                                                            <input class="form-control" id="modal-categoria" type="text" value="@(m.Falla != null ? m.Falla.Nombre_Falla : "Falla no disponible")" readonly>
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <label class="form-label" for="modal-categoria">Otras Actividades</label>
+                                                            <input class="form-control" id="modal-categoria" type="text" value="@(m.O_Actividades != null ? m.O_Actividades.Nombre_O_Actividad : "Actividad no disponible")" readonly>
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <label class="form-label" for="modal-categoria">Estado:</label>
+                                                            <input class="form-control" id="modal-categoria" type="text" value="@(m.Estados != null ? m.Estados.Nombre_Estado : "Estado no disponible")" readonly>
+                                                        </div>
+
+                                                        <hr />
+                                                        <h5>Detalle Equipo</h5>
+                                                        <br />
+                                                        <br />
+                                                        <!-- A partir de aquí comienza la tercera columna -->
+                                                        <div class="col-md-4 mb-3">
+                                                            <label class="form-label" for="modal-nombre-equipos">Nombre Equipo:</label>
+                                                            <input class="form-control" id="modal-nombre-equipos" type="text" value="@m.Nombre_Equipos" readonly>
+                                                        </div>
+                                                        <div class="col-md-4 mb-3">
+                                                            <label class="form-label" for="modal-tipo">Tipo Equipo:</label>
+                                                            <input class="form-control" id="modal-tipo" type="text" value="@m.Tipo" readonly>
+                                                        </div>
+                                                        <div class="col-md-4 mb-3">
+                                                            <label class="form-label" for="modal-color">Color Equipo:</label>
+                                                            <input class="form-control" id="modal-color" type="text" value="@m.Color" readonly>
+                                                        </div>
+                                                        <div class="col-md-4 mb-3">
+                                                            <label class="form-label" for="modal-serie">Numero Serie:</label>
+                                                            <input class="form-control" id="modal-serie" type="text" value="@m.Serie" readonly>
+                                                        </div>
+                                                        <div class="col-md-4 mb-3">
+                                                            <label class="form-label" for="modal-cod-patrimonial">Codogo Patrimonial:</label>
+                                                            <input class="form-control" id="modal-cod-patrimonial" type="text" value="@m.Cod_Patrimonial" readonly>
+                                                        </div>
+
+                                                        <div class="col-md-4 mb-3">
+                                                            <label class="form-label" for="modal-descripcion">Fecha Ingreso Equipo:</label>
+                                                            <input class="form-control" id="modal-descripcion" type="text" value="@(m.Ingreso.HasValue ? m.Ingreso.Value.ToString("yyyy-MM-dd") : string.Empty)" readonly>
+                                                        </div>
+
+
+
+                                                        <div class="col-md-4 mb-3">
+                                                            <label class="form-label" for="modal-modelo">Numero Modelo Equipo:</label>
+                                                            <input class="form-control" id="modal-modelo" type="text" value="@m.Modelo" readonly>
+                                                        </div>
+                                                        <div class="col-md-4 mb-3">
+                                                            <label class="form-label" for="modal-marca">Marca Equipo:</label>
+                                                            <input class="form-control" id="modal-marca" type="text" value="@m.Marca" readonly>
+                                                        </div>
+                                                        <div class="col-md-4 mb-3">
+                                                            <label class="form-label" for="modal-codigo-interno">Codigo Interno Equipo:</label>
+                                                            <input class="form-control" id="modal-codigo-interno" type="text" value="@m.Codigo_Interno" readonly>
+                                                        </div>
+
+
+                                                        <div class="col-md-6 mb-3">
+                                                            <label class="form-label" for="modal-sub-tipo">Observaciones Equipo:</label>
+                                                            <textarea class="form-control" id="modal-sub-tipo" rows="3" readonly>@m.Observaciones</textarea>
+                                                        </div>
+
+                                                        <div class="col-md-6 mb-3">
+                                                            <label class="form-label" for="modal-sub-tipo">Mantenimiento (referencia):</label>
+                                                            <textarea class="form-control" id="modal-sub-tipo" rows="3" readonly>@m.Sub_Tipo</textarea>
+                                                        </div>
+
+
+
+                                                        <button class="btn btn-danger" id="downloadPDF-@m.InformeID">Descargar PDF</button>
+
+
+
+                                                        <script>
+                                                            document.getElementById("downloadPDF-@m.InformeID").addEventListener("click", function () {
+                                                                const { jsPDF } = window.jspdf;
+                                                                const doc = new jsPDF();
+
+                                                                doc.setFontSize(16);
+                                                                doc.setFont("helvetica", "bold");
+                                                                doc.text("DETALLE DE INFORME TÉCNICO", 105, 20, null, null, "center");
+
+                                                                doc.setLineWidth(0.5);
+                                                                doc.setDrawColor(25, 63, 127);
+                                                                doc.line(20, 25, 190, 25);
+
+                                                                doc.setFontSize(12);
+                                                                doc.setFont("helvetica", "normal");
+                                                                doc.setTextColor(0, 0, 0);
+                                                                let yPosition = 35;
+
+                                                                const informeData = [
+                                                                    `TITULO: @Html.Raw(@m.Titulo) - @m.InformeID`,
+                                                                    `TIPO EQUIPO: @Html.Raw(@m.Tipo_Equipo.Nombre_Tipo_Equipo)`,
+                                                                    `AREA: @Html.Raw(@m.Area.Nombre_Area)`,
+                                                                    `SEDE: @Html.Raw(@m.Sede.Nombre_Sede)`,
+                                                                    `FALLAS REPORTADAS: @Html.Raw(@m.Falla.Nombre_Falla)`,
+                                                                    `OTRAS ACTIVIDADES: @Html.Raw(@m.O_Actividades.Nombre_O_Actividad)`,
+                                                                    `FECHA SOLICIDATA: @(m.Fecha_Solicitud.HasValue ? m.Fecha_Solicitud.Value.ToString("yyyy-MM-dd") : "No disponible")`,
+                                                                    `FECHA INFORME: @(m.Fecha_Informe.HasValue ? m.Fecha_Informe.Value.ToString("yyyy-MM-dd") : "No disponible")`,
+                                                                    `DIAGNOSTICO: @Html.Raw(@m.Diagnostico)`,
+                                                                    `SOLUCION: @Html.Raw(@m.Solucion_Primaria)`
+                                                                ];
+
+                                                                informeData.forEach(line => {
+                                                                    doc.text(line, 20, yPosition);
+                                                                    yPosition += 8;
+                                                                });
+
+                                                                yPosition += 10;
+                                                                doc.setFont("helvetica", "bold");
+                                                                doc.text("DETALLE DEL EQUIPO", 105, yPosition, null, null, "center");
+
+                                                                yPosition += 5;
+                                                                doc.line(20, yPosition, 190, yPosition);
+
+                                                                yPosition += 10;
+                                                                const equipoData = [
+                                                                    `NOMBRE EQUIPO: @Html.Raw(@m.Nombre_Equipos)`,
+                                                                    `TIPO EQUIPO: @Html.Raw(@m.Tipo)`,
+                                                                    `COLOR EQUIPO: @Html.Raw(@m.Color)`,
+                                                                    `NUMERO SERIE: @Html.Raw(@m.Serie)`,
+                                                                    `CODIGO PATRIMONIAL: @Html.Raw(@m.Cod_Patrimonial)`,
+                                                                    `FECHA INGRESO EQUIPO: @(m.Ingreso.HasValue ? m.Ingreso.Value.ToString("yyyy-MM-dd") : "No disponible")`,
+                                                                    `NUMERO MODELO: @Html.Raw(@m.Modelo)`,
+                                                                    `MARCA: @Html.Raw(@m.Marca)`,
+                                                                    `CODIGO INTERNO: @Html.Raw(@m.Codigo_Interno)`,
+                                                                    `OBSERVAIONES: @Html.Raw(@m.Observaciones)`,
+                                                                    `MANTENIMIENTO: @Html.Raw(@m.Sub_Tipo)`
+                                                                ];
+
+                                                                doc.setFont("helvetica", "normal");
+
+                                                                equipoData.forEach(line => {
+                                                                    doc.text(line, 20, yPosition);
+                                                                    yPosition += 8;
+                                                                });
+
+
+                                                                // Generar y descargar el PDF
+                                                                    doc.save(`Informe-Tecnico-${'@m.InformeID'}.pdf`);
+                                                            });
+                                                        </script>
+
+                                                    </div>
+
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Fin Modal "Ver" -->
+                                    <!-- Botón "Editar" -->
+                                    <a href="~/Informe/AgregarEditar/@m.InformeID" class="btn btn-phoenix-warning me-1 mb-1" title="Editar">
+                                        <span class="text" data-feather="edit" style="height: 15px; width: 15px;"></span>
+                                    </a>
+
+
+
+
+                                    <!-- Modal de confirmación de eliminación -->
+                                    <div class="modal fade text-start" id="modalEliminar" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modalEliminarLabel" style="display: none;" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header justify-content-between bg-primary">
+                                                    <h5 class="modal-title text-white dark__text-gray-1100" id="modalEliminarLabel">Confirmar Eliminación</h5>
+                                                    <button class="btn p-1" type="button" data-bs-dismiss="modal" aria-label="Close">
+                                                        <svg class="svg-inline--fa fa-xmark fs-9 text-white dark__text-gray-1100" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                                                            <path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="card-body p-4">
+                                                    <div class="mb-3">
+                                                        <label class="modal-title text-white dark__text-gray-1100"><h5>¿Está seguro de eliminar el registro?</h5></label>
+                                                    </div>
+                                                    <div class="d-flex justify-content-end">
+                                                        <a id="confirmDeleteButton" href="#" class="btn btn-phoenix-primary me-1 mb-1">Eliminar</a>
+                                                        <button class="btn btn-phoenix-danger me-1 mb-1" type="button" data-bs-dismiss="modal">Cancelar</button>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            </tr>
+                            </tr>
+                            </tr>
+                            </tr>
+                            </tr>
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="d-flex flex-between-center pt-3">
+                <div class="pagination"></div>
+                <p class="mb-0 fs-9">
+                    <span id="list-info" class="d-none d-sm-inline-block"><span class="text-body-tertiary"></span></span>
+                </p>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+
+<script>
+    // Configuración de List.js con paginación
+    const options = {
+        valueNames: ['name', 'email', 'age'], // Nombres de las columnas
+        page: 100, // Número de elementos por página
+        pagination: {
+            innerWindow: 1,
+            outerWindow: 1,
+            left: 0,
+            right: 0,
+            paginationClass: "pagination",
+        }
+    };
+    const userList = new List('tableExample3', options);
+
+    // Función para actualizar la información de paginación
+    function updatePaginationInfo() {
+        const pageInfo = document.getElementById('list-info');
+        const totalItems = userList.size();
+        const visibleItems = userList.visibleItems.length;
+        const page = userList.page;
+        const totalPages = userList.pages;
+
+        const start = (page * options.page) - options.page + 1;
+        const end = Math.min(page * options.page, totalItems);
+
+        pageInfo.innerHTML = `Filas ${visibleItems} <span class="text-body-tertiary"> Total </span>${totalItems}`;
+
+        feather.replace();
+        applyDeleteEvent();
+        applyStockStyles();
+        applyStatusStyles();
+
+    }
+
+    function applyDeleteEvent() {
+        document.querySelectorAll('.btn-phoenix-danger').forEach(button => {
+            button.addEventListener('click', function () {
+                const url = this.getAttribute('data-url');
+                document.getElementById('confirmDeleteButton').setAttribute('href', url);
+            });
+        });
+    }
+
+
+
+    userList.on('updated', function () {
+        updatePaginationInfo();
+        applyDeleteEvent();
+        applyStockStyles();
+        applyStatusStyles();
+    });
+
+    updatePaginationInfo();
+
+
+
+    // Aplica eventos y estilos al cargar la página
+    document.addEventListener('DOMContentLoaded', function () {
+        var deleteButtons = document.querySelectorAll('button[data-bs-target="#modalEliminar"]');
+        deleteButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                var url = this.getAttribute('data-url');
+                document.getElementById('confirmDeleteButton').setAttribute('href', url);
+            });
+        });
+
+        applyStockStyles();
+        applyStatusStyles();
+
+    });
+
+
+</script>
+
+
+
+
+
+
+</body >

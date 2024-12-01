@@ -1,0 +1,73 @@
+﻿@model EFTIC.Models.Tipo_Equipo
+
+@{
+    ViewBag.Title = "AgregarEditar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!--Pesstañas-->
+<nav class="breadcrumb">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="~/Home/Index">Home</a></li>
+        <li class="breadcrumb-item"><a href="~/Tipo_Equipo/Index">Tipo Equipo</a></li>
+        <li class="breadcrumb-item active">@(Model.Tipo_EquipoID > 0 ?  Model.Nombre_Tipo_Equipo : "Agregar Tipo Equipo")</li>
+    </ol>
+</nav>
+
+
+<div class="card shadow-none border my-4" data-component-card="data-component-card">
+    <div class="card-header p-4 border-bottom bg-body">
+        <center><h2>AGREGAR NUEVA TIPO EQUIPO</h2></center>
+    </div>
+
+
+    <div class="card-body p-4">
+
+
+        @using (Html.BeginForm("Guardar", "Tipo_Equipo", FormMethod.Post, new { @class = "row gx-1 gy-2 needs-validation", novalidate = "novalidate" }))
+        {
+            <div class="mb-1">
+                @Html.Label("ID Tipo Equipo:", new { @class = "form-label mb-0" })
+                @Html.TextBoxFor(x => x.Tipo_EquipoID, new { @class = "form-control", id = "idArea", placeholder = "ID", @readonly = "readonly" })
+            </div>
+            <div class="mb-1">
+                @Html.Label("Nombre Tipo Equipo:", new { @class = "form-label mb-0" })
+                @Html.TextBoxFor(x => x.Nombre_Tipo_Equipo, new { @class = "form-control", id = "nombreArea", placeholder = "Nombre del Tipo quipo", required = "required" })
+                <div class="invalid-feedback">
+                    Campo obligatorio*
+                </div>
+            </div>
+            <div class="mb-1">
+                @Html.Label("Descripción Tipo Equipo:", new { @class = "form-label mb-0" })
+                @Html.TextAreaFor(x => x.Descripcion_Tipo_Equipo, new { @class = "form-control", id = "descripcionArea", placeholder = "Agrega una descripcion de la Tipo Equipo", rows = 4 })
+            </div>
+            <div>
+                <br />
+                <button class="btn btn-phoenix-primary me-1 mb-1" type="submit">Guardar</button>
+                <button class="btn btn-phoenix-danger me-1 mb-1" type="button" onclick="window.location.href='/Tipo_Equipo/Index'">Cancelar</button>
+            </div>
+        }
+
+
+    </div>
+</div>
+
+
+<!--Funcionalidad de la alerta de Guardado-->
+<!--<script>
+    (function () {
+        'use strict';
+        var forms = document.querySelectorAll('.needs-validation');
+        Array.prototype.slice.call(forms).forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
+</script>-->
+<!-- fin Funcionalidad de la alerta de Guardado-->

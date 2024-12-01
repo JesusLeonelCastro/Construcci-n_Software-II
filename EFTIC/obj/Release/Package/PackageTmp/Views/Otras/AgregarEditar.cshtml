@@ -1,0 +1,54 @@
+﻿@model EFTIC.Models.O_Actividades
+
+@{
+    ViewBag.Title = "AgregarEditar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!--Pesstañas-->
+<nav class="breadcrumb">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="~/Home/Index">Home</a></li>
+        <li class="breadcrumb-item"><a href="~/Falla/Index">Otras Actividades</a></li>
+        <li class="breadcrumb-item active">@(Model.O_ActividadesID > 0 ?  Model.Nombre_O_Actividad : "Agregar Otras Activiades")</li>
+    </ol>
+</nav>
+
+
+<div class="card shadow-none border my-4" data-component-card="data-component-card">
+    <div class="card-header p-4 border-bottom bg-body">
+        <center><h2>AGREGAR NUEVA ACTIVIDAD</h2></center>
+    </div>
+
+
+    <div class="card-body p-4">
+
+
+        @using (Html.BeginForm("Guardar", "Otras", FormMethod.Post, new { @class = "row gx-1 gy-2 needs-validation", novalidate = "novalidate" }))
+        {
+            <div class="mb-1">
+                @Html.Label("ID  Actividad:", new { @class = "form-label mb-0" })
+                @Html.TextBoxFor(x => x.O_ActividadesID, new { @class = "form-control", id = "idArea", placeholder = "ID", @readonly = "readonly" })
+            </div>
+            <div class="mb-1">
+                @Html.Label("Nombre Actividad:", new { @class = "form-label mb-0" })
+                @Html.TextBoxFor(x => x.Nombre_O_Actividad, new { @class = "form-control", id = "nombreArea", placeholder = "Nombre de la Actividad", required = "required" })
+                <div class="invalid-feedback">
+                    Campo obligatorio*
+                </div>
+            </div>
+            <div class="mb-1">
+                @Html.Label("Descripción Actividad:", new { @class = "form-label mb-0" })
+                @Html.TextAreaFor(x => x.Descripcion_O_Actividad, new { @class = "form-control", id = "descripcionArea", placeholder = "Descripción de Actividad" , rows = 4  })
+            </div>
+            <div>
+                <br />
+                <button class="btn btn-phoenix-primary me-1 mb-1" type="submit">Guardar</button>
+                <button class="btn btn-phoenix-danger me-1 mb-1" type="button" onclick="window.location.href='/Otras/Index'">Cancelar</button>
+            </div>
+        }
+
+
+    </div>
+</div>

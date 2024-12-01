@@ -1,0 +1,665 @@
+﻿
+<!DOCTYPE html>
+<html data-navigation-type="default" data-navbar-horizontal-shape="default" lang="en-US" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Municipalidad Distrital Pocollay</title>
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="~/Assets/images/escudo_png.png">
+
+
+    <link rel="icon" type="Assets/image/png" sizes="32x32" href="~/Assets/images/escudo_png.png">
+    <link rel="icon" type="Assets/image/png" sizes="16x16" href="~/Assets/images/escudo_png.png">
+    <link rel="shortcut icon" type="image/x-icon" href="~/Assets/images/escudo_png.png">
+    <link rel="manifest" href="~/Assets/images/manifest.json">
+    <meta name="msapplication-TileImage" content="~/Assets/images/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="~/Assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="~/Assets/js/simplebar.min.js"></script>
+    <script src="~/Assets/js/config.js"></script>
+
+
+
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&amp;display=swap"
+          rel="stylesheet">
+    <link href="~/Assets/css/simplebar.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link href="~/Assets/css/theme-rtl.min.css" type="text/css" rel="stylesheet" id="style-rtl">
+    <link href="~/Assets/css/theme.min.css" type="text/css" rel="stylesheet" id="style-default">
+    <link href="~/Assets/css/user-rtl.min.css" type="text/css" rel="stylesheet" id="user-style-rtl">
+    <link href="~/Assets/css/user.min.css" type="text/css" rel="stylesheet" id="user-style-default">
+    <script>
+        var phoenixIsRTL = window.config.config.phoenixIsRTL;
+        if (phoenixIsRTL) {
+            var linkDefault = document.getElementById('style-default');
+            var userLinkDefault = document.getElementById('user-style-default');
+            linkDefault.setAttribute('disabled', true);
+            userLinkDefault.setAttribute('disabled', true);
+            document.querySelector('html').setAttribute('dir', 'rtl');
+        } else {
+            var linkRTL = document.getElementById('style-rtl');
+            var userLinkRTL = document.getElementById('user-style-rtl');
+            linkRTL.setAttribute('disabled', true);
+            userLinkRTL.setAttribute('disabled', true);
+        }
+    </script>
+    <link href="~/Assets/css/leaflet.css" rel="stylesheet">
+    <link href="~/Assets/css/MarkerCluster.css" rel="stylesheet">
+    <link href="~/Assets/css/MarkerCluster.Default.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+        <nav class="navbar navbar-vertical navbar-expand-lg" style="display:none;">
+            <script>
+                var navbarStyle = window.config.config.phoenixNavbarStyle;
+                if (navbarStyle && navbarStyle !== 'transparent') {
+                    document.querySelector('body').classList.add(`navbar-${navbarStyle}`);
+                }
+            </script>
+            <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
+                <!-- scrollbar removed-->
+                <div class="navbar-vertical-content">
+                    <ul class="navbar-nav flex-column" id="navbarVerticalNav">
+
+                        <li class="nav-item">
+                            <!-- label-->
+
+                            <br />
+
+                            <div class="nav-item-wrapper">
+                                <a class="nav-link label-1" href="~/Home/Index" role="button"
+                                   data-bs-toggle="" aria-expanded="false">
+                                    <div class="d-flex align-items-center">
+                                        <span class="nav-link-icon">
+                                            <span data-feather="home"></span>
+                                        </span><span class="nav-link-text-wrapper">
+                                            <span class="nav-link-text">Home</span>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <p class="navbar-vertical-label">Mantenimiento</p>
+
+                            <hr class="navbar-vertical-line" /><!-- parent pages-->
+                            <!-- parent pages-->
+                            <div class="nav-item-wrapper">
+                                <a class="nav-link label-1" href="~/Usuario/Index" role="button"
+                                   data-bs-toggle="" aria-expanded="false">
+                                    <div class="d-flex align-items-center">
+                                        <span class="nav-link-icon">
+                                            <span data-feather="users"></span>
+                                        </span><span class="nav-link-text-wrapper">
+                                            <span class="nav-link-text">Usuarios</span>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="nav-item-wrapper">
+                                <a class="nav-link label-1" href="~/Area/Index" role="button"
+                                   data-bs-toggle="" aria-expanded="false">
+                                    <div class="d-flex align-items-center">
+                                        <span class="nav-link-icon">
+                                            <span data-feather="codesandbox"></span>
+                                        </span><span class="nav-link-text-wrapper">
+                                            <span class="nav-link-text">Areas</span>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="nav-item-wrapper">
+                                <a class="nav-link label-1" href="~/Sede/Index" role="button"
+                                   data-bs-toggle="" aria-expanded="false">
+                                    <div class="d-flex align-items-center">
+                                        <span class="nav-link-icon">
+                                            <span data-feather="box"></span>
+                                        </span><span class="nav-link-text-wrapper">
+                                            <span class="nav-link-text">Sedes</span>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="nav-item-wrapper">
+                                <a class="nav-link label-1" href="~/Tipo_Equipo/Index" role="button"
+                                   data-bs-toggle="" aria-expanded="false">
+                                    <div class="d-flex align-items-center">
+                                        <span class="nav-link-icon">
+                                            <span data-feather="cpu"></span>
+
+                                        </span><span class="nav-link-text-wrapper">
+                                            <span class="nav-link-text">Tipo Equipos</span>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="nav-item-wrapper">
+                                <a class="nav-link label-1" href="~/Estados/Index" role="button"
+                                   data-bs-toggle="" aria-expanded="false">
+                                    <div class="d-flex align-items-center">
+                                        <span class="nav-link-icon">
+                                            <span data-feather="check-circle"></span>
+                                        </span><span class="nav-link-text-wrapper">
+                                            <span class="nav-link-text">Estados</span>
+                                        </span>
+                                    </div>
+                                </a>
+
+                            </div>
+
+                            <div class="nav-item-wrapper">
+                                <a class="nav-link label-1" href="~/Falla/Index" role="button"
+                                   data-bs-toggle="" aria-expanded="false">
+                                    <div class="d-flex align-items-center">
+                                        <span class="nav-link-icon">
+                                            <span data-feather="alert-triangle"></span>
+                                        </span><span class="nav-link-text-wrapper">
+                                            <span class="nav-link-text">Fallas Reportadas</span>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="nav-item-wrapper">
+                                <a class="nav-link label-1" href="~/Otras/Index" role="button"
+                                   data-bs-toggle="" aria-expanded="false">
+                                    <div class="d-flex align-items-center">
+                                        <span class="nav-link-icon">
+                                            <span data-feather="settings"></span>
+                                        </span><span class="nav-link-text-wrapper">
+                                            <span class="nav-link-text">Otras Actividades</span>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <p class="navbar-vertical-label">Informes Técnicos</p>
+                            <hr class="navbar-vertical-line" />
+
+                            <div class="nav-item-wrapper">
+                                <a class="nav-link dropdown-indicator label-1" href="#nv-informes" role="button"
+                                   data-bs-toggle="collapse" aria-expanded="false" aria-controls="nv-informes">
+                                    <div class="d-flex align-items-center">
+                                        <div class="dropdown-indicator-icon"><span class="fas fa-caret-right"></span></div>
+                                        <span class="nav-link-icon"><span data-feather="file-plus"></span></span>
+                                        <span class="nav-link-text">Informes Técnicos</span>
+                                    </div>
+                                </a>
+                                <div class="parent-wrapper label-1">
+                                    <ul class="nav collapse parent" data-bs-parent="#navbarVerticalCollapse" id="nv-informes">
+                                        <li class="collapsed-nav-item-title d-none">Informes Técnicos</li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="~/Informe/AgregarEditar">
+                                                <div class="d-flex align-items-center"><span class="nav-link-text">Nuevo Informe</span></div>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="~/Informe/Index">
+                                                <div class="d-flex align-items-center"><span class="nav-link-text">Lista Informes</span></div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="nav-item-wrapper">
+                                <a class="nav-link label-1" href="~/Equipo_Retirado/Index">
+                                    <div class="d-flex align-items-center">
+                                        <span class="nav-link-icon">
+                                            <span data-feather="printer"></span>
+                                        </span>
+                                        <span class="nav-link-text-wrapper">
+                                            <span class="nav-link-text">Equipos Retirados</span>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <p class="navbar-vertical-label">Inventario Equipo</p>
+                            <hr class="navbar-vertical-line" />
+
+                            <div class="nav-item-wrapper">
+                                <a class="nav-link dropdown-indicator label-1" href="#nv-equipos" role="button"
+                                   data-bs-toggle="collapse" aria-expanded="false" aria-controls="nv-equipos">
+                                    <div class="d-flex align-items-center">
+                                        <div class="dropdown-indicator-icon">
+                                            <span class="fas fa-caret-right"></span>
+                                        </div>
+                                        <span class="nav-link-icon">
+                                            <span data-feather="archive"></span> <!-- Icono adecuado para Inventario Equipos -->
+                                        </span>
+                                        <span class="nav-link-text">Inventario Equipos</span>
+                                    </div>
+                                </a>
+                                <div class="parent-wrapper label-1">
+                                    <ul class="nav collapse parent" data-bs-parent="#navbarVerticalCollapse" id="nv-equipos">
+                                        <li class="collapsed-nav-item-title d-none">Inventario Equipos</li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="~/Inventario/AgregarEditar">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="nav-link-text">Nuevo Equipo</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="~/Inventario/Index">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="nav-link-text">Lista Equipos</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="nav-item-wrapper">
+                                <a class="nav-link label-1" href="~/Equipo/Index">
+                                    <div class="d-flex align-items-center">
+                                        <span class="nav-link-icon">
+                                            <span data-feather="check-square"></span> <!-- Icono adecuado para Asignar Equipo -->
+                                        </span>
+                                        <span class="nav-link-text-wrapper">
+                                            <span class="nav-link-text">Asignar Equipo</span>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+
+
+
+
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar-vertical-footer">
+                <button class="btn navbar-vertical-toggle border-0 fw-semibold w-100 white-space-nowrap d-flex align-items-center">
+                    <span class="uil uil-left-arrow-to-left fs-8"></span><span class="uil uil-arrow-from-right fs-8"></span><span class="navbar-vertical-footer-text ms-2">Esconder</span>
+                </button>
+            </div>
+        </nav>
+
+        <nav class="navbar navbar-top fixed-top navbar-expand" id="navbarDefault" style="display:none;">
+            <div class="collapse navbar-collapse justify-content-between">
+                <div class="navbar-logo">
+                    <button class="btn navbar-toggler navbar-toggler-humburger-icon hover-bg-transparent" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse"
+                            aria-expanded="false" aria-label="Toggle Navigation">
+                        <span class="navbar-toggle-icon">
+                            <span class="toggle-line"></span>
+                        </span>
+                    </button>
+                    <a class="navbar-brand me-1 me-sm-3" href="~/Home/Index">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center">
+                                <img src="~/Assets/images/logotipo_png.png" style="width: 3cm; height: 1cm;" class="m-3" />
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="search-box navbar-top-search-box d-none d-lg-block" data-list='{"valueNames":["title"]}'
+                     style="width:25rem;">
+
+                    </form>
+
+
+                </div>
+                <ul class="navbar-nav navbar-nav-icons flex-row">
+
+
+
+
+                    <li class="nav-item">
+                        <div class="theme-control-toggle fa-icon-wait px-2">
+                            <input class="form-check-input ms-0 theme-control-toggle-input" type="checkbox"
+                                   data-theme-control="phoenixTheme" value="dark" id="themeControlToggle" /><label class="mb-0 theme-control-toggle-label theme-control-toggle-light" for="themeControlToggle"
+                                                                                                                   data-bs-toggle="tooltip" data-bs-placement="left" title="Modo Claro">
+                                <span class="icon"
+                                      data-feather="sun"></span>
+                            </label><label class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggle"
+                                           data-bs-toggle="tooltip" data-bs-placement="left" title="Modo Oscuro">
+                                <span class="icon"
+                                      data-feather="moon"></span>
+                            </label>
+                        </div>
+
+                    </li>
+
+
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link nav-link-lg fullscreen-btn" onclick="toggleFullScreen()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize">
+                                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+                            </svg>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link lh-1 pe-0" id="navbarDropdownUser" href="#!" role="button"
+                           data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
+                            <div class="avatar avatar-l ">
+                                <img class="rounded-circle " src="~/Assets/images/logo2.png" alt="" />
+
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end navbar-dropdown-caret py-0 dropdown-profile shadow border"
+                             aria-labelledby="navbarDropdownUser">
+                            <div class="card position-relative border-0">
+                                <div class="card-body p-0">
+                                    <div class="text-center pt-4 pb-3">
+                                        <div class="avatar avatar-xl ">
+                                            <img class="rounded-circle " src="~/Assets/images/logo2.png" alt="" />
+
+                                        </div>
+                                        <h6 class="mt-2 text-body-emphasis">SOPORTE - EFTIC</h6>
+                                    </div>
+
+                                </div>
+
+                                <div class="card-footer p-0 border-top border-translucent">
+                                    <br>
+                                    <div class="px-3">
+                                        <a class="btn btn-phoenix-secondary d-flex flex-center w-100" href="~/Autentication/Login">
+                                            <span class="me-2" data-feather="log-out"> </span>Cerrar sesion
+                                        </a>
+                                    </div>
+                                    <br>
+                                    <div class="my-2 text-center fw-bold fs-10 text-body-quaternary"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <nav class="navbar navbar-top navbar-slim fixed-top navbar-expand" id="topNavSlim" style="display:none;">
+            <div class="collapse navbar-collapse justify-content-between">
+                <div class="navbar-logo">
+                    <button class="btn navbar-toggler navbar-toggler-humburger-icon hover-bg-transparent" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse"
+                            aria-expanded="false" aria-label="Toggle Navigation">
+                        <span class="navbar-toggle-icon">
+                            <span class="toggle-line"></span>
+                        </span>
+                    </button>
+                    <a class="navbar-brand navbar-brand" href="index.html">
+                        DashBoard <span class="text-body-highlight d-none d-sm-inline">slim</span>
+                    </a>
+                </div>
+
+            </div>
+        </nav>
+        <nav class="navbar navbar-top fixed-top navbar-expand-lg" id="navbarTop" style="display:none;">
+            <div class="navbar-logo">
+                <button class="btn navbar-toggler navbar-toggler-humburger-icon hover-bg-transparent" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarTopCollapse" aria-controls="navbarTopCollapse"
+                        aria-expanded="false" aria-label="Toggle Navigation">
+                    <span class="navbar-toggle-icon">
+                        <span class="toggle-line"></span>
+                    </span>
+                </button>
+                <a class="navbar-brand me-1 me-sm-3" href="~/Home/Index">
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center">
+                            <img src="~/Assets/images/logotipo_png.png" style="width: 3cm; height: 1cm;" class="m-3" />
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+        </nav>
+
+        <nav class="navbar navbar-top navbar-slim justify-content-between fixed-top navbar-expand-lg" id="navbarTopSlim"
+             style="display:none;">
+            <div class="navbar-logo">
+                <button class="btn navbar-toggler navbar-toggler-humburger-icon hover-bg-transparent" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarTopCollapse" aria-controls="navbarTopCollapse"
+                        aria-expanded="false" aria-label="Toggle Navigation">
+                    <span class="navbar-toggle-icon">
+                        <span class="toggle-line"></span>
+                    </span>
+                </button>
+                <a class="navbar-brand navbar-brand" href="~/Home/Index">
+                    SanJose <span class="text-body-highlight d-none d-sm-inline">slim</span>
+                </a>
+
+            </div>
+
+
+        </nav>
+        <nav class="navbar navbar-top fixed-top navbar-expand-lg" id="navbarCombo" data-navbar-top="combo"
+             data-move-target="#navbarVerticalNav" style="display:none;">
+            <div class="navbar-logo">
+                <button class="btn navbar-toggler navbar-toggler-humburger-icon hover-bg-transparent" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse"
+                        aria-expanded="false" aria-label="Toggle Navigation">
+                    <span class="navbar-toggle-icon">
+                        <span class="toggle-line"></span>
+                    </span>
+                </button>
+                <a class="navbar-brand me-1 me-sm-3" href="~/Home/Index">
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center">
+                            <img src="~/Assets/images/logotipo_png.png" style="width: 3cm; height: 1cm;" class="m-3" />
+
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+        </nav>
+        <nav class="navbar navbar-top fixed-top navbar-slim justify-content-between navbar-expand-lg" id="navbarComboSlim"
+             data-navbar-top="combo" data-move-target="#navbarVerticalNav" style="display:none;">
+            <div class="navbar-logo">
+                <button class="btn navbar-toggler navbar-toggler-humburger-icon hover-bg-transparent" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse"
+                        aria-expanded="false" aria-label="Toggle Navigation">
+                    <span class="navbar-toggle-icon">
+                        <span class="toggle-line"></span>
+                    </span>
+                </button>
+                <a class="navbar-brand navbar-brand" href="~/Home/Index">
+                    SanJose <span class="text-body-highlight d-none d-sm-inline">slim</span>
+                </a>
+            </div>
+
+
+        </nav>
+
+        <script>
+            var navbarTopShape = window.config.config.phoenixNavbarTopShape;
+            var navbarPosition = window.config.config.phoenixNavbarPosition;
+            var body = document.querySelector('body');
+            var navbarDefault = document.querySelector('#navbarDefault');
+            var navbarTop = document.querySelector('#navbarTop');
+            var topNavSlim = document.querySelector('#topNavSlim');
+            var navbarTopSlim = document.querySelector('#navbarTopSlim');
+            var navbarCombo = document.querySelector('#navbarCombo');
+            var navbarComboSlim = document.querySelector('#navbarComboSlim');
+            var dualNav = document.querySelector('#dualNav');
+
+            var documentElement = document.documentElement;
+            var navbarVertical = document.querySelector('.navbar-vertical');
+
+            if (navbarPosition === 'dual-nav') {
+                topNavSlim.remove();
+                navbarTop.remove();
+                navbarVertical.remove();
+                navbarTopSlim.remove();
+                navbarCombo.remove();
+                navbarComboSlim.remove();
+                navbarDefault.remove();
+                dualNav.removeAttribute('style');
+                document.documentElement.setAttribute('data-navigation-type', 'dual');
+
+            } else if (navbarTopShape === 'slim' && navbarPosition === 'vertical') {
+                navbarDefault.remove();
+                navbarTop.remove();
+                navbarTopSlim.remove();
+                navbarCombo.remove();
+                navbarComboSlim.remove();
+                topNavSlim.style.display = 'block';
+                navbarVertical.style.display = 'inline-block';
+                document.documentElement.setAttribute('data-navbar-horizontal-shape', 'slim');
+
+            } else if (navbarTopShape === 'slim' && navbarPosition === 'horizontal') {
+                navbarDefault.remove();
+                navbarVertical.remove();
+                navbarTop.remove();
+                topNavSlim.remove();
+                navbarCombo.remove();
+                navbarComboSlim.remove();
+                navbarTopSlim.removeAttribute('style');
+                document.documentElement.setAttribute('data-navbar-horizontal-shape', 'slim');
+            } else if (navbarTopShape === 'slim' && navbarPosition === 'combo') {
+                navbarDefault.remove();
+                navbarTop.remove();
+                topNavSlim.remove();
+                navbarCombo.remove();
+                navbarTopSlim.remove();
+                navbarComboSlim.removeAttribute('style');
+                navbarVertical.removeAttribute('style');
+                document.documentElement.setAttribute('data-navbar-horizontal-shape', 'slim');
+            } else if (navbarTopShape === 'default' && navbarPosition === 'horizontal') {
+                navbarDefault.remove();
+                topNavSlim.remove();
+                navbarVertical.remove();
+                navbarTopSlim.remove();
+                navbarCombo.remove();
+                navbarComboSlim.remove();
+                navbarTop.removeAttribute('style');
+                document.documentElement.setAttribute('data-navigation-type', 'horizontal');
+            } else if (navbarTopShape === 'default' && navbarPosition === 'combo') {
+                topNavSlim.remove();
+                navbarTop.remove();
+                navbarTopSlim.remove();
+                navbarDefault.remove();
+                navbarComboSlim.remove();
+                navbarCombo.removeAttribute('style');
+                navbarVertical.removeAttribute('style');
+                document.documentElement.setAttribute('data-navigation-type', 'combo');
+
+
+            } else {
+                topNavSlim.remove();
+                navbarTop.remove();
+                navbarTopSlim.remove();
+                navbarCombo.remove();
+                navbarComboSlim.remove();
+                navbarDefault.removeAttribute('style');
+                navbarVertical.removeAttribute('style');
+            }
+
+            var navbarTopStyle = window.config.config.phoenixNavbarTopStyle;
+            var navbarTop = document.querySelector('.navbar-top');
+            if (navbarTopStyle === 'darker') {
+                navbarTop.setAttribute('data-navbar-appearance', 'darker');
+            }
+
+            var navbarVerticalStyle = window.config.config.phoenixNavbarVerticalStyle;
+            var navbarVertical = document.querySelector('.navbar-vertical');
+            if (navbarVerticalStyle === 'darker') {
+                navbarVertical.setAttribute('data-navbar-appearance', 'darker');
+            }
+        </script>
+
+        <script>
+            //FullPantalla
+            function toggleFullScreen() {
+                if (!document.fullscreenElement) {
+                    document.documentElement.requestFullscreen();
+                } else {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    }
+                }
+            }
+        </script>
+
+
+        <div class="content">
+            @RenderBody()
+
+
+
+        </div>
+
+
+        <footer class="footer position-absolute w-100">
+            <div class="row g-0 justify-content-center align-items-center h-100">
+                <div class="col-12 text-center">
+                    <p class="mb-0 mt-2 text-body">
+                        Municipalidad Distrital de Pocollay - Informes Tecnicos & Gestion Inventarios<span class="d-none d-sm-inline-block"></span><span class="d-none d-sm-inline-block mx-1">|</span><br class="d-sm-none" />2024 &copy;<a class="mx-1"
+                                                                                                                                                                                                                       href="">EFTIC</a>
+                    </p>
+                </div>
+
+            </div>
+        </footer>
+
+        </div>
+
+    </main><!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+    <div class="offcanvas offcanvas-end settings-panel border-0" id="settings-offcanvas" tabindex="-1"
+         aria-labelledby="settings-offcanvas">
+
+
+
+        </a>
+
+        <!-- ===============================================-->
+        <!--    JavaScripts-->
+        <!-- ===============================================-->
+        <script src="~/Assets/js/popper.min.js"></script>
+        <script src="~/Assets/js/bootstrap.min.js"></script>
+        <script src="~/Assets/js/anchor.min.js"></script>
+        <script src="~/Assets/js/is.min.js"></script>
+        <script src="~/Assets/js/all.min.js"></script>
+        <script src="~/Assets/js/lodash.min.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+        <script src="~/Assets/js/list.min.js"></script>
+        <script src="~/Assets/js/feather.min.js"></script>
+        <script src="~/Assets/js/dayjs.min.js"></script>
+        <script src="~/Assets/js/phoenix.js"></script>
+        <script src="~/Assets/js/echarts.min.js"></script>
+        <script src="~/Assets/js/leaflet.js"></script>
+        <script src="~/Assets/js/leaflet.markercluster.js"></script>
+        <script src="~/Assets/js/leaflet-tilelayer-colorfilter.min.js"></script>
+        <script src="~/Assets/js/ecommerce-dashboard.js"></script>
+</body>
+
+</html>
+

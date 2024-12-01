@@ -1,0 +1,265 @@
+﻿@model List<EFTIC.Models.Sede>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@if (TempData["AlertarGuardar"] != null)
+{
+    <div class="alert alert-outline-success d-flex align-items-center" role="alert">
+        <span class="fas fa-check-circle text-success fs-5 me-3"></span>
+        <p class="mb-0 flex-1">@TempData["AlertarGuardar"]</p>
+        <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+<!--Alertar de guardado-->
+<!--Alertar de eliminado-->
+@if (TempData["AlertarEliminar"] != null)
+{
+    <div class="alert alert-outline-warning d-flex align-items-center" role="alert">
+        <span class="fas fa-check-circle text-warning fs-5 me-3"></span>
+        <p class="mb-0 flex-1">@TempData["AlertarEliminar"]</p>
+        <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+<!--Alertar de eliminado-->
+
+
+<div class="card shadow-none border my-4" data-component-card="data-component-card">
+    <div class="card-header p-4 border-bottom bg-body">
+
+        <center><h2>GESTIONAR SEDES</h2></center>
+
+    </div>
+    <div class="card-body p-4">
+
+        <div id="tableExample3" data-list='{"valueNames":["name","email","age"],"page":15,"pagination":true}'>
+
+            <div class="search-box mb-3 d-flex justify-content-start align-items-center">
+                <button class="btn btn-phoenix-primary me-3 mb-1" type="button" onclick="window.location.href='AgregarEditar'">Agregar</button>
+
+            </div>
+
+            <form class="position-relative d-flex">
+                <input class="form-control search-input search form-control-sm" type="search" id="searchInput" placeholder="Buscar" aria-label="Search">
+            </form>
+            <br />
+
+            <div class="table-responsive">
+                <table class="table table-striped table-sm fs-9 mb-0">
+                    <thead>
+                        <tr>
+                            <th class="sort border-top border-translucent ps-3" data-sort="name">Id</th>
+                            <th class="sort border-top" data-sort="email">Sede</th>
+                            <th class="sort border-top" data-sort="email">Descripcion</th>
+                            <th class="sort text-center align-middle pe-0 border-top" scope="col">Accion</th>
+
+                        </tr>
+                    </thead>
+                    <tbody class="list">
+
+                        @foreach (var m in Model)
+                        {
+                            <tr>
+                                <td class="align-middle ps-3 name">@m.SedeID</td>
+                                <td class="align-middle email">@m.Nombre_Sede </td>
+                                <td class="align-middle email">@m.Descripcion </td>
+
+
+                                <td class="align-middle white-space-nowrap text-center pe-0">
+
+                                    <!-- Botón "Ver" -->
+                                    <button class="btn btn-phoenix-info me-1 mb-1" type="button" data-bs-toggle="modal" data-bs-target="#modalVer-@m.SedeID">
+                                        <span class="text" data-feather="eye" style="height: 15px; width: 15px;"></span>
+                                    </button>
+
+                                    <!-- Modal "Ver" -->
+                                    <div class="modal fade text-start" id="modalVer-@m.SedeID" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modalVerLabel-@m.SedeID" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header justify-content-between bg-primary">
+                                                    <h5 class="modal-title text-white dark__text-gray-1100" id="modalVerLabel-@m.SedeID">Detalles Sede</h5>
+                                                    <button class="btn p-1" type="button" data-bs-dismiss="modal" aria-label="Close">
+                                                        <svg class="svg-inline--fa fa-xmark fs-9 text-white dark__text-gray-1100" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                                                            <path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="card-body p-4">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="modal-id">ID Sede:</label>
+                                                        <input class="form-control" id="modal-id" type="text" value="@m.SedeID" readonly>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="modal-nombre">Sede:</label>
+                                                        <input class="form-control" id="modal-nombre" type="text" value="@m.Nombre_Sede" readonly>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="modal-nombre">Descripcion:</label>
+                                                        <textarea class="form-control" id="modal-descripcion" rows="3" readonly>@m.Descripcion</textarea>
+                                                    </div>
+                                                    <center>
+                                                        <button class="btn btn-phoenix-danger me-1 mb-1" type="button" data-bs-dismiss="modal">Cancelar</button>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Fin Modal "Ver" -->
+                                    <!-- Botón "Editar" -->
+
+                                    <a href="~/Sede/AgregarEditar/@m.SedeID" class="btn btn-phoenix-warning me-1 mb-1" title="Editar">
+                                        <span class="text" data-feather="edit" style="height: 15px; width: 15px;"></span>
+                                    </a>
+
+
+
+                                    <!-- Botón "Eliminar" -->
+                                    <button class="btn btn-phoenix-danger me-1 mb-1" type="button" data-bs-toggle="modal" data-bs-target="#modalEliminar" data-url="Eliminar/@m.SedeID">
+                                        <span class="text" data-feather="trash-2" style="height: 15px; width: 15px;"></span>
+                                    </button>
+
+
+                                    <!-- Modal de confirmación de eliminación -->
+                                    <div class="modal fade text-start" id="modalEliminar" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modalEliminarLabel" style="display: none;" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header justify-content-between bg-primary">
+                                                    <h5 class="modal-title text-white dark__text-gray-1100" id="modalEliminarLabel">Confirmar Eliminación</h5>
+                                                    <button class="btn p-1" type="button" data-bs-dismiss="modal" aria-label="Close">
+                                                        <svg class="svg-inline--fa fa-xmark fs-9 text-white dark__text-gray-1100" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                                                            <path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="card-body p-4">
+                                                    <div class="mb-3">
+                                                        <label class="modal-title text-white dark__text-gray-1100"><h5>¿Está seguro de eliminar el registro?</h5></label>
+                                                    </div>
+                                                    <div class="d-flex justify-content-end">
+                                                        <a id="confirmDeleteButton" href="#" class="btn btn-phoenix-primary me-1 mb-1">Eliminar</a>
+                                                        <button class="btn btn-phoenix-danger me-1 mb-1" type="button" data-bs-dismiss="modal">Cancelar</button>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="d-flex flex-between-center pt-3">
+                <div class="pagination"></div> <!-- Contenedor de paginación -->
+                <p class="mb-0 fs-9">
+                    <span id="list-info" class="d-none d-sm-inline-block"><span class="text-body-tertiary"></span></span>
+
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+
+<script>const options = {
+        valueNames: ['name', 'email', 'age'],
+        page: 20,
+        pagination: {
+            innerWindow: 1,
+            outerWindow: 1,
+            left: 0,
+            right: 0,
+            paginationClass: "pagination",
+        }
+    };
+
+    const userList = new List('tableExample3', options);
+
+    // Función para actualizar la información de paginación
+    function updatePaginationInfo() {
+        const pageInfo = document.getElementById('list-info');
+        const totalItems = userList.size();
+        const visibleItems = userList.visibleItems.length;
+        const page = userList.page;
+        const totalPages = userList.pages;
+
+        const start = (page * options.page) - options.page + 1;
+        const end = Math.min(page * options.page, totalItems);
+
+        pageInfo.innerHTML = `Filas ${visibleItems} <span class="text-body-tertiary"> Total </span>${totalItems}`;
+
+        // Reinicializar Feather Icons
+        feather.replace();
+
+        // Aplicar eventos de eliminación
+        applyDeleteEvent();
+    }
+
+    // Función para aplicar eventos de eliminación
+    function applyDeleteEvent() {
+        document.querySelectorAll('.btn-phoenix-danger').forEach(button => {
+            button.addEventListener('click', function () {
+                const url = this.getAttribute('data-url');
+                document.getElementById('confirmDeleteButton').setAttribute('href', url);
+            });
+        });
+    }
+
+
+    // Actualizar la información de paginación y aplicar eventos después de cada cambio de página
+    userList.on('updated', function () {
+        updatePaginationInfo();
+    });
+
+
+    userList.on('updated', updatePaginationInfo);
+
+    // Inicializar el texto al cargar
+    updatePaginationInfo();
+
+    // Alternar vista completa/reducida
+    document.getElementById('viewToggle').addEventListener('click', function (e) {
+        e.preventDefault();
+        const currentText = this.textContent.trim();
+        if (currentText === 'Todo') {
+            userList.show(1000); // Mostrar todos los elementos
+            this.innerHTML = `View Less <svg class="svg-inline--fa fa-angle-right ms-1" data-fa-transform="down-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="" style="transform-origin: 0.3125em 0.5625em;"><g transform="translate(160 256)"><g transform="translate(0, 32)  scale(1, 1)  rotate(0 0 0)"><path fill="currentColor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" transform="translate(-160 -256)"></path></g></g></svg>`;
+        } else {
+            userList.show(); // Mostrar todos los elementos
+            userList.update(); // Actualizar para mostrar solo los elementos visibles
+            this.innerHTML = `Todo <svg class="svg-inline--fa fa-angle-right ms-1" data-fa-transform="down-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="" style="transform-origin: 0.3125em 0.5625em;"><g transform="translate(160 256)"><g transform="translate(0, 32)  scale(1, 1)  rotate(0 0 0)"><path fill="currentColor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" transform="translate(-160 -256)"></path></g></g></svg>`;
+        }
+        updatePaginationInfo();
+    });</script>
+
+
+<!-- funcion Elimina registro-->
+<script>document.addEventListener('DOMContentLoaded', function () {
+        // Selecciona todos los botones que abren el modal
+        var deleteButtons = document.querySelectorAll('button[data-bs-target="#modalEliminar"]');
+
+        // Agrega un evento click a cada botón
+        deleteButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                // Obtén la URL de eliminación del atributo data-url
+                var url = this.getAttribute('data-url');
+                // Establece la URL en el botón de confirmación dentro del modal
+                document.getElementById('confirmDeleteButton').setAttribute('href', url);
+            });
+        });
+    });</script>
+<!-- fin funcion Elimina registro-->
+</body>

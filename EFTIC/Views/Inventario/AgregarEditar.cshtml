@@ -1,0 +1,244 @@
+﻿@model EFTIC.Models.Inventario
+
+@{
+    ViewBag.Title = "AgregarEditar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    List<EFTIC.Models.Area> area = ViewBag.Tipo2 as List<EFTIC.Models.Area>;
+    List<EFTIC.Models.Sede> sede = ViewBag.Tipo as List<EFTIC.Models.Sede>;
+    List<EFTIC.Models.Tipo_Equipo> tipo_equipo = ViewBag.Tipo3 as List<EFTIC.Models.Tipo_Equipo>;
+}
+
+<!--Pesstañas-->
+<nav class="breadcrumb">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="~/Home/Index">Home</a></li>
+        <li class="breadcrumb-item"><a href="~/Inventario/Index">Inventario</a></li>
+        <li class="breadcrumb-item active">@(Model.InventarioID > 0 ?  Model.Cod_Patrimonial : "Agregar Inventario")</li>
+    </ol>
+</nav>
+
+<!-- Card 1 -->
+<div class="card shadow-none border my-4" data-component-card="data-component-card">
+    <div class="card-header p-4 border-bottom bg-body">
+        <center><h2>AGREGAR NUEVO EQUIPO INVENTARIO</h2></center>
+    </div>
+
+    <div class="card-body p-4">
+        @using (Html.BeginForm("Guardar", "Inventario", FormMethod.Post, new { @class = "row gx-1 gy-2 needs-validation", novalidate = "novalidate" }))
+        {
+            <!-- Tarjeta 1: Información Básica -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="row">
+                        <!-- Columna para la imagen -->
+                        <div class="col-md-4 text-center">
+                            <img id="imagen-equipo" src="~/Assets/images/logo2.png" alt="Imagen referencial" class="img-fluid" />
+                        </div>
+
+                        <!-- Columna 1: Información General -->
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                                @Html.Label("ID Inventario:", new { @class = "form-label mb-0" })
+                                @Html.TextBoxFor(x => x.InventarioID, new { @class = "form-control", id = "idArea", placeholder = "ID", @readonly = "readonly" })
+                            </div>
+
+                            <div class="form-group mb-3">
+                                @Html.Label("Sede:", new { @class = "form-label" })
+                                <select name="SedeID" class="form-select">
+                                    <option value="">--Seleccione--</option>
+                                    @foreach (var t in sede)
+                                    {
+                                        <option value="@t.SedeID" @(Model.SedeID == t.SedeID ? "selected" : "")>@t.Nombre_Sede</option>
+                                    }
+                                </select>
+                                @Html.ValidationMessageFor(x => x.SedeID, null, new { @class = "label label-danger" })
+                            </div>
+
+                            <div class="form-group mb-3">
+                                @Html.Label("Área:", new { @class = "form-label" })
+                                <select name="AreaID" class="form-select">
+                                    <option value="">--Seleccione--</option>
+                                    @foreach (var t in area)
+                                    {
+                                        <option value="@t.AreaID" @(Model.AreaID == t.AreaID ? "selected" : "")>@t.Nombre_Area</option>
+                                    }
+                                </select>
+                                @Html.ValidationMessageFor(x => x.AreaID, null, new { @class = "label label-danger" })
+                            </div>
+                        </div>
+
+                        <!-- Columna 2: Información del Equipo -->
+                        <div class="col-md-4">
+                            <div class="form-group mb-3">
+                                @Html.Label("Tipo de Equipo:", new { @class = "form-label" })
+                                <select name="Tipo_EquipoID" class="form-select" id="tipo-equipo">
+                                    <option value="">--Seleccione--</option>
+                                    @foreach (var t in tipo_equipo)
+                                    {
+                                        <option value="@t.Tipo_EquipoID" @(Model.Tipo_EquipoID == t.Tipo_EquipoID ? "selected" : "")>@t.Nombre_Tipo_Equipo</option>
+                                    }
+                                </select>
+                                @Html.ValidationMessageFor(x => x.Tipo_EquipoID, null, new { @class = "label label-danger" })
+                            </div>
+
+                            <div class="mb-1">
+                                @Html.Label("Código Patrimonial:", new { @class = "form-label mb-0" })
+                                @Html.TextBoxFor(x => x.Cod_Patrimonial, new { @class = "form-control", id = "nombreArea", placeholder = "Ingrese código patrimonial", required = "required" })
+                                <div class="invalid-feedback">
+                                    Campo obligatorio*
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                @Html.Label("Fecha Ingreso Equipo:", new { @class = "form-label" })
+                                @Html.TextBoxFor(x => x.Ingreso, new { @class = "form-control", @type = "date", id = "fechaInforme", value = DateTime.Now.ToString("yyyy-MM-dd"), required = "required" })
+                                <div class="invalid-feedback">Llenar campo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: Detalles del Equipo -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="row">
+                        <!-- Columna 1 -->
+                        <div class="col-md-6">
+                            <div class="mb-1">
+                                @Html.Label("Color de equipo:", new { @class = "form-label mb-0" })
+                                @Html.TextBoxFor(x => x.Color, new { @class = "form-control", placeholder = "Ingrese el color del equipo", required = "required" })
+                            </div>
+
+                            <div class="mb-1">
+                                @Html.Label("Serie de equipo:", new { @class = "form-label mb-0" })
+                                @Html.TextBoxFor(x => x.Serie, new { @class = "form-control", placeholder = "Ingrese el código de serie", required = "required" })
+                            </div>
+
+                            <div class="mb-1">
+                                @Html.Label("Modelo de equipo:", new { @class = "form-label mb-0" })
+                                @Html.TextBoxFor(x => x.Modelo, new { @class = "form-control", placeholder = "Ingrese el modelo de equipo", required = "required" })
+                            </div>
+                        </div>
+
+                        <!-- Columna 2 -->
+                        <div class="col-md-6">
+                            <div class="mb-1">
+                                @Html.Label("Marca de equipo:", new { @class = "form-label mb-0" })
+                                @Html.TextBoxFor(x => x.Marca, new { @class = "form-control", placeholder = "Ingrese la marca de equipo", required = "required" })
+                            </div>
+
+                            <div class="mb-1">
+                                @Html.Label("Código Interno:", new { @class = "form-label mb-0" })
+                                @Html.TextBoxFor(x => x.Codigo_Interno, new { @class = "form-control", placeholder = "Ingrese el código interno de equipo", required = "required" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3: Especificaciones Técnicas -->
+
+            <!-- Tarjeta 3: Especificaciones Técnicas -->
+            <div class="card mb-3">
+                <div class="card border border-primary">
+                    <div class="card-body">
+                        <div class="mb-1">
+                            @Html.Label("Direccion Mac:", new { @class = "form-label mb-0" })
+                            @Html.TextBoxFor(x => x.direccion_MAC, new { @class = "form-control", placeholder = "Ingrese la direccion mac" })
+                        </div>
+
+                        <div class="mb-1">
+                            @Html.Label("Capacidad Disco Duro:", new { @class = "form-label mb-0" })
+                            @Html.TextBoxFor(x => x.Capacidad_Disco, new { @class = "form-control", placeholder = "Ingrese la capacidad de disco" })
+                        </div>
+
+                        <div class="mb-1">
+                            @Html.Label("Capacidad Ram:", new { @class = "form-label mb-0" })
+                            @Html.TextBoxFor(x => x.Capacidad_Ram, new { @class = "form-control", placeholder = "Ingrese la capacidad de ram" })
+                        </div>
+
+                        <div class="mb-1">
+                            @Html.Label("Marca Procesador:", new { @class = "form-label mb-0" })
+                            @Html.TextBoxFor(x => x.Marca_Procesador, new { @class = "form-control", placeholder = "Ingrese la marca del procesador" })
+                        </div>
+
+                        <div class="mb-1">
+                            @Html.Label("Dirección IP:", new { @class = "form-label mb-0" })
+                            @Html.TextBoxFor(x => x.Direccion_IP, new { @class = "form-control", placeholder = "Ingrese la dirección IP" })
+                        </div>
+
+                        <div class="mb-1">
+                            @Html.Label("Sistema Operativo:", new { @class = "form-label mb-0" })
+                            @Html.TextBoxFor(x => x.Sistema_operativo, new { @class = "form-control", placeholder = "Ingrese el Sistema Operativo" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <br />
+                <button class="btn btn-phoenix-primary me-1 mb-1" type="submit">Guardar</button>
+                <button class="btn btn-phoenix-danger me-1 mb-1" type="button" onclick="window.location.href='/Inventario/Index'">Cancelar</button>
+            </div>
+        }
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const selectTipoEquipo = document.querySelector('select[name="Tipo_EquipoID"]');
+        const imagenEquipo = document.getElementById('imagen-equipo');
+
+        // Mapeo de tipos de equipo con URLs de imágenes
+        const imagenesEquipos = {
+            1: '/Assets/images/cpu.png', // Reemplazar con las rutas de imágenes reales
+            2: '/Assets/images/monitor.png',
+            3: '/Assets/images/impresora.png',
+            4: '/Assets/images/fuente.png',
+            5: '/Assets/images/teclado.png',
+            6: '/Assets/images/mouse.png',
+            7: '/Assets/images/disco.png',
+
+            // Añadir más según sea necesario
+        };
+
+        // Función para actualizar la imagen cuando se selecciona un tipo de equipo
+        selectTipoEquipo.addEventListener('change', function () {
+            const tipoEquipoID = selectTipoEquipo.value;
+
+            // Si el tipo de equipo tiene una imagen asociada
+            if (imagenesEquipos[tipoEquipoID]) {
+                imagenEquipo.src = imagenesEquipos[tipoEquipoID];
+            } else {
+                // Imagen por defecto si no se selecciona o no hay imagen para el tipo de equipo
+                imagenEquipo.src = '/Assets/images/logo2.png'; // Ruta de la imagen por defecto
+            }
+        });
+    });
+</script>
+
+
+<script>
+    document.querySelector("form").onsubmit = function () {
+        // Reemplaza los valores vacíos por '---' antes de enviar el formulario
+        if (document.getElementById("direccion_MAC").value.trim() === "") {
+            document.getElementById("direccion_MAC").value = "---";
+        }
+        if (document.getElementById("Capacidad_Disco").value.trim() === "") {
+            document.getElementById("Capacidad_Disco").value = "---";
+        }
+        if (document.getElementById("Capacidad_Ram").value.trim() === "") {
+            document.getElementById("Capacidad_Ram").value = "---";
+        }
+        if (document.getElementById("Marca_Procesador").value.trim() === "") {
+            document.getElementById("Marca_Procesador").value = "---";
+        }
+        if (document.getElementById("Direccion_IP").value.trim() === "") {
+            document.getElementById("Direccion_IP").value = "---";
+        }
+        if (document.getElementById("Sistema_operativo").value.trim() === "") {
+            document.getElementById("Sistema_operativo").value = "---";
+        }
+    };
+</script>
