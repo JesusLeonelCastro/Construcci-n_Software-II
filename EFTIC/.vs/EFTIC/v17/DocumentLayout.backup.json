@@ -7,20 +7,64 @@
       "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:views\\asignar\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|d:\\pryectos\\construccionii\\eftic\\views\\asignar\\agregareditar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:views\\asignar\\agregareditar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\controllers\\asignarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:controllers\\asignarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|d:\\pryectos\\construccionii\\eftic\\models\\asignar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\models\\asignar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:models\\asignar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\controllers\\informecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:controllers\\informecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\controllers\\autenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:controllers\\autenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\views\\tipo_equipo\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:views\\tipo_equipo\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\views\\informe\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:views\\informe\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\views\\area\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:views\\area\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\views\\area\\agregareditar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:views\\area\\agregareditar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\models\\informes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:models\\informes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\views\\informe\\agregareditar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:views\\informe\\agregareditar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\controllers\\areacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:controllers\\areacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\models\\area.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:models\\area.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\controllers\\informecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:controllers\\informecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\models\\tipo_equipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,14 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\controllers\\tipo_equipocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:controllers\\tipo_equipocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\views\\area\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:views\\area\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -49,14 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\models\\informes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:models\\informes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\controllers\\estadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,10 +103,6 @@
       "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\views\\informe\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:views\\informe\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -89,10 +113,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\controllers\\sedecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:controllers\\sedecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\controllers\\autenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:controllers\\autenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -113,10 +133,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\views\\otras\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:views\\otras\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\views\\area\\agregareditar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:views\\area\\agregareditar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\models\\o_actividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -141,10 +157,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\views\\estados\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:views\\estados\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\views\\tipo_equipo\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:views\\tipo_equipo\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\v7\\v7\\ConsoleApp1\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -192,14 +204,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\assets\\images\\cultural2.jpeg||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
       "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:assets\\images\\cultural2.jpeg||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\views\\informe\\agregareditar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:views\\informe\\agregareditar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\controllers\\areacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|solutionrelative:controllers\\areacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1059E7B1-72F3-4307-9042-C72219A84B38}|EFTIC.csproj|D:\\PRYECTOS\\ConstruccionII\\EFTIC\\models\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -263,37 +267,229 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "AgregarEditar.cshtml",
+              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Asignar\\AgregarEditar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Asignar\\AgregarEditar.cshtml",
+              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Asignar\\AgregarEditar.cshtml",
+              "RelativeToolTip": "Views\\Asignar\\AgregarEditar.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAACAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-29T20:44:12.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Asignar\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Asignar\\Index.cshtml",
+              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Asignar\\Index.cshtml",
+              "RelativeToolTip": "Views\\Asignar\\Index.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADcAAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-29T04:09:14.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Asignar.cs",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Models\\Asignar.cs",
               "RelativeDocumentMoniker": "Models\\Asignar.cs",
               "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Models\\Asignar.cs",
               "RelativeToolTip": "Models\\Asignar.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA1wBoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-29T03:51:35.097Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Area\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Area\\Index.cshtml",
+              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Area\\Index.cshtml",
+              "RelativeToolTip": "Views\\Area\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-05T13:03:57.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Web.config",
+              "RelativeDocumentMoniker": "Web.config",
+              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Web.config",
+              "RelativeToolTip": "Web.config",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAD4AAADHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-04-05T13:03:57.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Informe\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Informe\\Index.cshtml",
+              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Informe\\Index.cshtml",
+              "RelativeToolTip": "Views\\Informe\\Index.cshtml",
+              "ViewState": "AgIAANoBAAAAAAAAAAAAAIkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-05T13:03:57.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Tipo_Equipo\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Tipo_Equipo\\Index.cshtml",
+              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Tipo_Equipo\\Index.cshtml",
+              "RelativeToolTip": "Views\\Tipo_Equipo\\Index.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-05T13:03:57.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AutenticationController.cs",
+              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\AutenticationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AutenticationController.cs",
+              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\AutenticationController.cs",
+              "RelativeToolTip": "Controllers\\AutenticationController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAqwC4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T13:03:57.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AsignarController.cs",
+              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\AsignarController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AsignarController.cs",
+              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\AsignarController.cs",
+              "RelativeToolTip": "Controllers\\AsignarController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T03:51:22.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AgregarEditar.cshtml",
+              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Area\\AgregarEditar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Area\\AgregarEditar.cshtml",
+              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Area\\AgregarEditar.cshtml",
+              "RelativeToolTip": "Views\\Area\\AgregarEditar.cshtml",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAAD4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-05T13:03:57.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AreaController.cs",
+              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\AreaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AreaController.cs",
+              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\AreaController.cs",
+              "RelativeToolTip": "Controllers\\AreaController.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAkwFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T13:03:57.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AgregarEditar.cshtml",
+              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Informe\\AgregarEditar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Informe\\AgregarEditar.cshtml",
+              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Informe\\AgregarEditar.cshtml",
+              "RelativeToolTip": "Views\\Informe\\AgregarEditar.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-05T13:03:57.948Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Informes.cs",
+              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Models\\Informes.cs",
+              "RelativeDocumentMoniker": "Models\\Informes.cs",
+              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Models\\Informes.cs",
+              "RelativeToolTip": "Models\\Informes.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T13:03:57.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "InformeController.cs",
+              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\InformeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\InformeController.cs",
+              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\InformeController.cs",
+              "RelativeToolTip": "Controllers\\InformeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T13:03:57.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Tipo_Equipo.cs",
+              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Models\\Tipo_Equipo.cs",
+              "RelativeDocumentMoniker": "Models\\Tipo_Equipo.cs",
+              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Models\\Tipo_Equipo.cs",
+              "RelativeToolTip": "Models\\Tipo_Equipo.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAiwEQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T13:03:57.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Tipo_EquipoController.cs",
+              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\Tipo_EquipoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Tipo_EquipoController.cs",
+              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\Tipo_EquipoController.cs",
+              "RelativeToolTip": "Controllers\\Tipo_EquipoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T13:03:57.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "Area.cs",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Models\\Area.cs",
               "RelativeDocumentMoniker": "Models\\Area.cs",
               "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Models\\Area.cs",
               "RelativeToolTip": "Models\\Area.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAADwvzoAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAKIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T13:03:57.634Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T13:03:57.634Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -305,97 +501,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Area\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Area\\Index.cshtml",
-              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Area\\Index.cshtml",
-              "RelativeToolTip": "Views\\Area\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-05T13:03:57.919Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Tipo_EquipoController.cs",
-              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\Tipo_EquipoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Tipo_EquipoController.cs",
-              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\Tipo_EquipoController.cs",
-              "RelativeToolTip": "Controllers\\Tipo_EquipoController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T13:03:57.949Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Tipo_Equipo.cs",
-              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Models\\Tipo_Equipo.cs",
-              "RelativeDocumentMoniker": "Models\\Tipo_Equipo.cs",
-              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Models\\Tipo_Equipo.cs",
-              "RelativeToolTip": "Models\\Tipo_Equipo.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAiwEQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T13:03:57.932Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "InformeController.cs",
-              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\InformeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\InformeController.cs",
-              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\InformeController.cs",
-              "RelativeToolTip": "Controllers\\InformeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T13:03:57.759Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AsignarController.cs",
-              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\AsignarController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AsignarController.cs",
-              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\AsignarController.cs",
-              "RelativeToolTip": "Controllers\\AsignarController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T03:51:22.631Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Asignar\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Asignar\\Index.cshtml",
-              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Asignar\\Index.cshtml",
-              "RelativeToolTip": "Views\\Asignar\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-29T04:09:14.265Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Web.config",
-              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Web.config",
-              "RelativeDocumentMoniker": "Web.config",
-              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Web.config",
-              "RelativeToolTip": "Web.config",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAEEAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-04-05T13:03:57.93Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 18,
               "Title": "web.config",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\web.config",
               "RelativeDocumentMoniker": "Views\\web.config",
@@ -407,19 +513,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Informes.cs",
-              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Models\\Informes.cs",
-              "RelativeDocumentMoniker": "Models\\Informes.cs",
-              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Models\\Informes.cs",
-              "RelativeToolTip": "Models\\Informes.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAA0wAoAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T13:03:57.866Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 20,
               "Title": "Usuario.cs",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "Models\\Usuario.cs",
@@ -430,12 +524,8 @@
               "WhenOpened": "2025-04-05T13:03:57.759Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "Equipo_RetiradoController.cs",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\Equipo_RetiradoController.cs",
               "RelativeDocumentMoniker": "Controllers\\Equipo_RetiradoController.cs",
@@ -447,7 +537,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 19,
               "Title": "UsuarioController.cs",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\UsuarioController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
@@ -459,7 +549,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "Sede.cs",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Models\\Sede.cs",
               "RelativeDocumentMoniker": "Models\\Sede.cs",
@@ -471,7 +561,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "Login.cshtml",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Autentication\\Login.cshtml",
               "RelativeDocumentMoniker": "Views\\Autentication\\Login.cshtml",
@@ -483,7 +573,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "EstadosController.cs",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\EstadosController.cs",
               "RelativeDocumentMoniker": "Controllers\\EstadosController.cs",
@@ -495,7 +585,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 27,
               "Title": "SedeController.cs",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\SedeController.cs",
               "RelativeDocumentMoniker": "Controllers\\SedeController.cs",
@@ -507,7 +597,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
@@ -519,7 +609,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -531,31 +621,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Informe\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Informe\\Index.cshtml",
-              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Informe\\Index.cshtml",
-              "RelativeToolTip": "Views\\Informe\\Index.cshtml",
-              "ViewState": "AgIAAMIBAAAAAAAAAAAAAIkAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-05T13:03:57.923Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "AutenticationController.cs",
-              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\AutenticationController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AutenticationController.cs",
-              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\AutenticationController.cs",
-              "RelativeToolTip": "Controllers\\AutenticationController.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAqwC4AAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T13:03:57.757Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -567,7 +633,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 31,
               "Title": "AgregarEditar.cshtml",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Inventario\\AgregarEditar.cshtml",
               "RelativeDocumentMoniker": "Views\\Inventario\\AgregarEditar.cshtml",
@@ -579,19 +645,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "AgregarEditar.cshtml",
-              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Area\\AgregarEditar.cshtml",
-              "RelativeDocumentMoniker": "Views\\Area\\AgregarEditar.cshtml",
-              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Area\\AgregarEditar.cshtml",
-              "RelativeToolTip": "Views\\Area\\AgregarEditar.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002242|",
-              "WhenOpened": "2025-04-05T13:03:57.922Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 29,
               "Title": "InventarioController.cs",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\InventarioController.cs",
               "RelativeDocumentMoniker": "Controllers\\InventarioController.cs",
@@ -603,7 +657,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 30,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Inventario\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Inventario\\Index.cshtml",
@@ -615,7 +669,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "AreaTest.cs",
               "DocumentMoniker": "D:\\v7\\v7\\EFTIC TEST\\AreaTest.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\v7\\v7\\EFTIC TEST\\AreaTest.cs",
@@ -627,7 +681,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "EquipoRetiradoTest.cs",
               "DocumentMoniker": "D:\\v7\\v7\\EFTIC TEST\\EquipoRetiradoTest.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\v7\\v7\\EFTIC TEST\\EquipoRetiradoTest.cs",
@@ -639,7 +693,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "EstadoTest.cs",
               "DocumentMoniker": "D:\\v7\\v7\\EFTIC TEST\\EstadoTest.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\v7\\v7\\EFTIC TEST\\EstadoTest.cs",
@@ -651,7 +705,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "UsuarioTest.cs",
               "DocumentMoniker": "D:\\v7\\v7\\EFTIC TEST\\UsuarioTest.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\v7\\v7\\EFTIC TEST\\UsuarioTest.cs",
@@ -663,7 +717,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 32,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Otras\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Otras\\Index.cshtml",
@@ -675,7 +729,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "FallasReportadasTest.cs",
               "DocumentMoniker": "D:\\v7\\v7\\EFTIC TEST\\FallasReportadasTest.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\v7\\v7\\EFTIC TEST\\FallasReportadasTest.cs",
@@ -687,7 +741,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "OtrosTest.cs",
               "DocumentMoniker": "D:\\v7\\v7\\EFTIC TEST\\OtrosTest.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\v7\\v7\\EFTIC TEST\\OtrosTest.cs",
@@ -699,7 +753,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "TipoEquipoTest.cs",
               "DocumentMoniker": "D:\\v7\\v7\\EFTIC TEST\\TipoEquipoTest.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\v7\\v7\\EFTIC TEST\\TipoEquipoTest.cs",
@@ -711,7 +765,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "InformeTest.cs",
               "DocumentMoniker": "D:\\v7\\v7\\EFTIC TEST\\InformeTest.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\v7\\v7\\EFTIC TEST\\InformeTest.cs",
@@ -723,7 +777,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "SedeTest.cs",
               "DocumentMoniker": "D:\\v7\\v7\\EFTIC TEST\\SedeTest.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\v7\\v7\\EFTIC TEST\\SedeTest.cs",
@@ -735,7 +789,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "O_Actividades.cs",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Models\\O_Actividades.cs",
               "RelativeDocumentMoniker": "Models\\O_Actividades.cs",
@@ -747,7 +801,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "Falla.cs",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Models\\Falla.cs",
               "RelativeDocumentMoniker": "Models\\Falla.cs",
@@ -759,7 +813,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 66,
               "Title": "packages.config",
               "DocumentMoniker": "D:\\v7\\v7\\EFTIC TEST\\packages.config",
               "RelativeDocumentMoniker": "..\\..\\..\\v7\\v7\\EFTIC TEST\\packages.config",
@@ -771,7 +825,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "Equipo_Retirado.cs",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Models\\Equipo_Retirado.cs",
               "RelativeDocumentMoniker": "Models\\Equipo_Retirado.cs",
@@ -783,7 +837,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "Estados.cs",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Models\\Estados.cs",
               "RelativeDocumentMoniker": "Models\\Estados.cs",
@@ -795,7 +849,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Falla\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Falla\\Index.cshtml",
@@ -807,7 +861,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 38,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Estados\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Estados\\Index.cshtml",
@@ -819,19 +873,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Tipo_Equipo\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Tipo_Equipo\\Index.cshtml",
-              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Tipo_Equipo\\Index.cshtml",
-              "RelativeToolTip": "Views\\Tipo_Equipo\\Index.cshtml",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002242|",
-              "WhenOpened": "2025-04-05T13:03:57.933Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\v7\\v7\\ConsoleApp1\\Program.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\v7\\v7\\ConsoleApp1\\Program.cs",
@@ -843,7 +885,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Equipo_Retirado\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Equipo_Retirado\\Index.cshtml",
@@ -855,7 +897,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "AgregarEditar.cshtml",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Equipo_Retirado\\AgregarEditar.cshtml",
               "RelativeDocumentMoniker": "Views\\Equipo_Retirado\\AgregarEditar.cshtml",
@@ -867,7 +909,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 47,
               "Title": "MUNICIPIO-DE-POCOLLAY.jpg -  [Espa\u00F1ol (M\u00E9xico)] - Bitmap [1200x675, 24 bits, JPG]",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Assets\\images\\MUNICIPIO-DE-POCOLLAY.jpg",
               "RelativeDocumentMoniker": "Assets\\images\\MUNICIPIO-DE-POCOLLAY.jpg",
@@ -878,7 +920,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "CULTURAL.jpeg",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Assets\\images\\CULTURAL.jpeg",
               "RelativeDocumentMoniker": "Assets\\images\\CULTURAL.jpeg",
@@ -889,7 +931,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "logomodificado.png -  [Espa\u00F1ol (M\u00E9xico)] - PNG [770x324, 32 bits, PNG]",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Assets\\images\\logomodificado.png",
               "RelativeDocumentMoniker": "Assets\\images\\logomodificado.png",
@@ -900,7 +942,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "POLIDEPORTIVO.jpeg",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Assets\\images\\POLIDEPORTIVO.jpeg",
               "RelativeDocumentMoniker": "Assets\\images\\POLIDEPORTIVO.jpeg",
@@ -911,7 +953,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "SG.jpeg",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Assets\\images\\SG.jpeg",
               "RelativeDocumentMoniker": "Assets\\images\\SG.jpeg",
@@ -922,7 +964,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "logotipo_png.png -  [Espa\u00F1ol (M\u00E9xico)] - PNG [1520x552, 32 bits, PNG]",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Assets\\images\\logotipo_png.png",
               "RelativeDocumentMoniker": "Assets\\images\\logotipo_png.png",
@@ -933,7 +975,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "muni.jpg -  [Espa\u00F1ol (M\u00E9xico)] - Bitmap [3023x3741, 24 bits, JPG]",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Assets\\images\\muni.jpg",
               "RelativeDocumentMoniker": "Assets\\images\\muni.jpg",
@@ -944,7 +986,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 49,
               "Title": "monitor.png -  [Espa\u00F1ol (M\u00E9xico)] - PNG [256x256, 32 bits, PNG]",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Assets\\images\\monitor.png",
               "RelativeDocumentMoniker": "Assets\\images\\monitor.png",
@@ -955,7 +997,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 50,
               "Title": "CULTURAL2.jpeg",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Assets\\images\\CULTURAL2.jpeg",
               "RelativeDocumentMoniker": "Assets\\images\\CULTURAL2.jpeg",
@@ -966,31 +1008,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "AgregarEditar.cshtml",
-              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Informe\\AgregarEditar.cshtml",
-              "RelativeDocumentMoniker": "Views\\Informe\\AgregarEditar.cshtml",
-              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Informe\\AgregarEditar.cshtml",
-              "RelativeToolTip": "Views\\Informe\\AgregarEditar.cshtml",
-              "ViewState": "AQIAAOoAAAAAAAAAAAAAAPsAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002242|",
-              "WhenOpened": "2025-04-05T13:03:57.948Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "AreaController.cs",
-              "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\AreaController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AreaController.cs",
-              "ToolTip": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\AreaController.cs",
-              "RelativeToolTip": "Controllers\\AreaController.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAkwFgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T13:03:57.948Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "Inventario.cs",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Models\\Inventario.cs",
               "RelativeDocumentMoniker": "Models\\Inventario.cs",
@@ -1002,7 +1020,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "FallaController.cs",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\FallaController.cs",
               "RelativeDocumentMoniker": "Controllers\\FallaController.cs",
@@ -1014,7 +1032,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "OtrasController.cs",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Controllers\\OtrasController.cs",
               "RelativeDocumentMoniker": "Controllers\\OtrasController.cs",
@@ -1026,7 +1044,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "RouteConfig.cs",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\App_Start\\RouteConfig.cs",
               "RelativeDocumentMoniker": "App_Start\\RouteConfig.cs",
@@ -1038,7 +1056,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "AgregarEditar.cshtml",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Usuario\\AgregarEditar.cshtml",
               "RelativeDocumentMoniker": "Views\\Usuario\\AgregarEditar.cshtml",
@@ -1050,7 +1068,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\PRYECTOS\\ConstruccionII\\EFTIC\\Views\\Usuario\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Usuario\\Index.cshtml",

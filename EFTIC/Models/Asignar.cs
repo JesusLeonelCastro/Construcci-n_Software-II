@@ -19,6 +19,7 @@ namespace EFTIC.Models
 
         public int? InventarioID { get; set; }
 
+
         public virtual Area Area { get; set; }
 
         public virtual Inventario Inventario { get; set; }
@@ -47,6 +48,83 @@ namespace EFTIC.Models
                 throw;
             }
             return ObjAsignar;
+        }
+
+        // Obtener_Asignar
+        public Asignar Obtener(int id)
+        {
+
+            var ObjAsignar = new Asignar();
+            try
+            {
+                using (var db = new Model1())
+                {
+                    ObjAsignar = db.Asignar
+                               .Include("Area")
+                               .Include("Usuario")
+                               .Include("Inventario")
+
+                               .Where(x => x.AsignarID == id)
+                               .SingleOrDefault();
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+
+            }
+            return ObjAsignar;
+
+        }
+
+        //Agregar_Asignar
+        public void Guardar()
+        {
+
+            try
+            {
+                using (var db = new Model1())
+                {
+                    if (this.AsignarID > 0)
+                    {
+                        db.Entry(this).State = EntityState.Modified;
+                    }
+                    else
+                    {
+                        db.Entry(this).State = EntityState.Added;
+                        db.SaveChanges();
+                    }
+                    db.SaveChanges();
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+
+            }
+        }
+
+        //Eliminar_Asignar
+        public void Eliminar()
+        {
+
+            try
+            {
+                using (var db = new Model1())
+                {
+                    db.Entry(this).State = EntityState.Deleted;
+                    db.SaveChanges();
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

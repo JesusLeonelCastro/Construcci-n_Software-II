@@ -1,0 +1,75 @@
+﻿@model EFTIC.Models.Asignar
+@{
+    ViewBag.Title = "AgregarEditar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    List<EFTIC.Models.Area> areas = ViewBag.Tipo;
+    List<EFTIC.Models.Usuario> usuarios = ViewBag.Tipo2;
+    List<EFTIC.Models.Inventario> inventarios = ViewBag.Tipo3;
+
+}
+
+
+<nav class="breadcrumb">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="~/Home/Index">Home</a></li>
+        <li class="breadcrumb-item"><a href="~/Asignar/Index">Asignaciones</a></li>
+        <li class="breadcrumb-item active">@(Model.AsignarID > 0 ? "Editar #" + Model.AsignarID : "Nueva Asignación")</li>
+    </ol>
+</nav>
+
+<div class="card shadow-none border my-4">
+    <div class="card-header p-4 border-bottom bg-body">
+        <h2 class="text-center">ASIGNACIÓN DE EQUIPOS</h2>
+    </div>
+
+    <div class="card-body p-4">
+        @using (Html.BeginForm("Guardar", "Asignar", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(model => model.AsignarID)
+
+            <div class="mb-3">
+                @Html.LabelFor(model => model.AreaID, "Área", new { @class = "form-label" })
+                @Html.DropDownListFor(model => model.AreaID,
+                    new SelectList(areas, "AreaID", "Nombre_Area", Model.AreaID),
+                    "-- Seleccione Área --",
+                    new { @class = "form-select", required = "required" })
+                @Html.ValidationMessageFor(model => model.AreaID, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="mb-3">
+                @Html.LabelFor(model => model.UsuarioID, "Usuario", new { @class = "form-label" })
+                @Html.DropDownListFor(model => model.UsuarioID,
+                    new SelectList(usuarios, "UsuarioID", "Nombre_Usuario", Model.UsuarioID),
+                    "-- Seleccione Usuario --",
+                    new { @class = "form-select", required = "required" })
+                @Html.ValidationMessageFor(model => model.UsuarioID, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="mb-3">
+                @Html.LabelFor(model => model.InventarioID, "Equipo/Inventario", new { @class = "form-label" })
+                <select name="InventarioID" class="form-select" required>
+                    <option value="">-- Seleccione Equipo --</option>
+                    @foreach (var inventario in inventarios)
+                    {
+                        <!-- Muestra Código + Descripción (Nombre) -->
+                        <option value="@inventario.InventarioID"
+                                @(Model.InventarioID == inventario.InventarioID ? "selected" : "")>
+                            @inventario.Cod_Patrimonial - @inventario.Codigo_Interno - @inventario.Tipo_EquipoID - @inventario.Marca
+                        </option>
+                    }
+                </select>
+                @Html.ValidationMessageFor(model => model.InventarioID, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="mt-4">
+                
+
+                <button class="btn btn-phoenix-primary me-1 mb-1" type="submit">Guardar</button>
+                <button class="btn btn-phoenix-danger me-1 mb-1" type="button" onclick="window.location.href='/Asignar/Index'">Cancelar</button>
+
+            </div>
+        }
+    </div>
+</div>

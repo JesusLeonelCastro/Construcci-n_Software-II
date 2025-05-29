@@ -238,6 +238,7 @@
     <Content Include="Views\Equipo_Retirado\Index.cshtml" />
     <Content Include="Views\Equipo_Retirado\AgregarEditar.cshtml" />
     <Content Include="Views\Asignar\Index.cshtml" />
+    <Content Include="Views\Asignar\AgregarEditar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

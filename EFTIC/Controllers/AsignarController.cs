@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace EFTIC.Controllers
 {
-    [Authorize]
+    
     public class AsignarController : Controller
     {
         private Asignar objasignar = new Asignar();
@@ -39,5 +39,44 @@ namespace EFTIC.Controllers
                 return View(asignacionesFiltradas);
             }
         }
+
+        //Editar_Asignar
+        public ActionResult AgregarEditar(int id = 0)
+        {
+            ViewBag.Tipo = new Area().Listar();
+            ViewBag.Tipo2 = new Usuario().Listar();
+            ViewBag.Tipo3 = new Inventario().Listar();
+            return View(id == 0 ? new Asignar() : objasignar.Obtener(id));
+        }
+
+        //Guardamos_Asignar
+        public ActionResult Guardar(Asignar objasignar)
+        {
+            if (ModelState.IsValid)
+            {
+                objasignar.Guardar();
+                TempData["AlertarGuardar"] = "Se registro se agrego correctamente"; //Alerta de guardado
+
+                return Redirect("~/Asignar/Index");
+
+            }
+            else
+            {
+                return View("~/Views/Asignar/AgregarEditar.cshtml");
+            }
+
+        }
+
+
+        //Eliminamos_Asignar
+        public ActionResult Eliminar(int id)
+        {
+            objasignar.AsignarID = id;
+            objasignar.Eliminar();
+            TempData["AlertarEliminar"] = "El registro se Elimino correctamente"; //Alerta de eliminado
+
+            return Redirect("~/Asignar/Index");
+        }
+
     }
 }
