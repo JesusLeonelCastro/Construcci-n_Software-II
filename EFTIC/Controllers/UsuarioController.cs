@@ -12,9 +12,11 @@ namespace EFTIC.Controllers
     [Authorize]
     public class UsuarioController : Controller
     {
+        //Instacion de clases
         private Usuario objusuario = new Usuario();
         private readonly Reniec _reniecService;
 
+        //Declaracion de variables
         private Area objarea = new Area();
         private Sede objsede = new Sede();
 
@@ -26,6 +28,7 @@ namespace EFTIC.Controllers
             _reniecService = new Reniec(httpClient);
         }
 
+        //Index principal
         public ActionResult Index(string criterio)
         {
 
@@ -50,11 +53,13 @@ namespace EFTIC.Controllers
             return View(objusuario.Obtener(id));
         }
 
+        //Buscar Usuario
         public ActionResult Buscar(string criterio)
         {
             return View(string.IsNullOrEmpty(criterio) ? objusuario.Listar() : objusuario.Buscar(criterio));
         }
 
+        //Agregar o editar Usuario
         public async Task<ActionResult> AgregarEditar(int id = 0, string dni = null)
         {
             ViewBag.Tipo = new Sede().Listar();
@@ -72,6 +77,7 @@ namespace EFTIC.Controllers
                     model.Nombre_Usuario = nombre;
                     model.Apellido_Usuario = apellido;
                 }
+                //Validacion si no lo encuentra
                 else
                 {
                     ViewBag.Error = "No se encontraron datos para el DNI proporcionado.";
@@ -81,6 +87,7 @@ namespace EFTIC.Controllers
             return View(model);
         }
 
+        //Guardar Usuario
         public ActionResult Guardar(Usuario objusuario)
         {
             if (ModelState.IsValid)
@@ -95,6 +102,7 @@ namespace EFTIC.Controllers
             }
         }
 
+        //Eliminar Usuario
         public ActionResult Eliminar(int id)
         {
             objusuario.UsuarioID = id;
@@ -118,5 +126,9 @@ namespace EFTIC.Controllers
 
             return Json(areas, JsonRequestBehavior.AllowGet);
         }
+
+
+
+        //RF - 001 - REQUERIEMINTO FUNCIONAL - "USUARIOS"
     }
 }

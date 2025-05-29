@@ -44,28 +44,9 @@ namespace EFTIC.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Usuario> Usuario { get; set; }
 
-        //Listar_Sede
-
-        //public List<Sede> Listar()
-        //{
-        //    var ObjSede = new List<Sede>();
-        //    try
-        //    {
-        //        using (var db = new Model1())
-        //        {
-        //            ObjSede = db.Sede.ToList();
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine("Error en Listar(): " + ex.Message);
-        //        throw;
-        //    }
-        //    return ObjSede;
-        //}
+        
 
         //Listar_Sede
-
         public List<Sede> Listar(Model1 context = null)
         {
             var ObjSede = new List<Sede>();
@@ -160,7 +141,6 @@ namespace EFTIC.Models
         }
 
         //Eliminar_Sede 
-
         public void Eliminar()
         {
 
@@ -178,5 +158,7 @@ namespace EFTIC.Models
                 throw;
             }
         }
+        //RF - 004 - REQURIMIENTO FUNCIONAL - SEDES 
+
     }
 }

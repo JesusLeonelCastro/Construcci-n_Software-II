@@ -85,5 +85,7 @@ namespace EFTIC.Controllers
 
             return Redirect("~/Equipo_Retirado/Index");
         }
+
+        //RF - 011 - REQUERIEMTO FUNCIONAL - EQUIPOS RETIRADOS
     }
 }

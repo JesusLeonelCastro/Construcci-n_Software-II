@@ -114,3 +114,61 @@ C:\Users\USUARIO\Desktop\v6_Prubas_Automatizadas\EFTIC TEST\obj\Debug\EFTIC TEST
 C:\Users\USUARIO\Desktop\v6_Prubas_Automatizadas\EFTIC TEST\obj\Debug\EFTIC TEST.csproj.CopyComplete
 C:\Users\USUARIO\Desktop\v6_Prubas_Automatizadas\EFTIC TEST\obj\Debug\EFTIC TEST.dll
 C:\Users\USUARIO\Desktop\v6_Prubas_Automatizadas\EFTIC TEST\obj\Debug\EFTIC TEST.pdb
+D:\v9\v7\EFTIC TEST\bin\Debug\es\Microsoft.TestPlatform.AdapterUtilities.resources.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\EFTIC TEST.dll.config
+D:\v9\v7\EFTIC TEST\bin\Debug\EFTIC TEST.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\EFTIC TEST.pdb
+D:\v9\v7\EFTIC TEST\bin\Debug\Castle.Core.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\EFTIC.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\EntityFramework.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\EntityFramework.SqlServer.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\Moq.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\System.Web.Mvc.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\itextsharp.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\Newtonsoft.Json.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\System.Web.WebPages.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\System.Web.WebPages.Razor.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\System.Web.Razor.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\BouncyCastle.Cryptography.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\EFTIC.pdb
+D:\v9\v7\EFTIC TEST\bin\Debug\EFTIC.dll.config
+D:\v9\v7\EFTIC TEST\bin\Debug\Castle.Core.xml
+D:\v9\v7\EFTIC TEST\bin\Debug\EntityFramework.xml
+D:\v9\v7\EFTIC TEST\bin\Debug\EntityFramework.SqlServer.xml
+D:\v9\v7\EFTIC TEST\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\v9\v7\EFTIC TEST\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\v9\v7\EFTIC TEST\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\v9\v7\EFTIC TEST\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\v9\v7\EFTIC TEST\bin\Debug\System.Web.Mvc.xml
+D:\v9\v7\EFTIC TEST\bin\Debug\itextsharp.xml
+D:\v9\v7\EFTIC TEST\bin\Debug\Newtonsoft.Json.xml
+D:\v9\v7\EFTIC TEST\bin\Debug\System.Web.WebPages.xml
+D:\v9\v7\EFTIC TEST\bin\Debug\System.Web.WebPages.Razor.xml
+D:\v9\v7\EFTIC TEST\bin\Debug\System.Web.Razor.xml
+D:\v9\v7\EFTIC TEST\bin\Debug\BouncyCastle.Cryptography.xml
+D:\v9\v7\EFTIC TEST\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\v9\v7\EFTIC TEST\bin\Debug\es\System.Web.Mvc.resources.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\es\System.Web.WebPages.resources.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\es\System.Web.WebPages.Razor.resources.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\es\System.Web.Razor.resources.dll
+D:\v9\v7\EFTIC TEST\bin\Debug\es\System.Web.WebPages.Deployment.resources.dll
+D:\v9\v7\EFTIC TEST\obj\Debug\EFTIC TEST.csproj.AssemblyReference.cache
+D:\v9\v7\EFTIC TEST\obj\Debug\EFTIC TEST.csproj.CoreCompileInputs.cache
+D:\v9\v7\EFTIC TEST\obj\Debug\EFTIC TEST.csproj.CopyComplete
+D:\v9\v7\EFTIC TEST\obj\Debug\EFTIC TEST.dll
+D:\v9\v7\EFTIC TEST\obj\Debug\EFTIC TEST.pdb

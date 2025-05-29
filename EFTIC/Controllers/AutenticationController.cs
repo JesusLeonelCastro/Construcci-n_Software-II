@@ -44,6 +44,7 @@ namespace EFTIC.Controllers
         }
 
 
+        //Cerrar session de usuario
         private bool IsValid(Usuario usuarios)
         {
 
@@ -57,5 +58,7 @@ namespace EFTIC.Controllers
             Session.Abandon();
             return RedirectToAction("Index", "Login");
         }
+
+        //FR 001- REQUERIMIENTO FUNCIONAL - AUTENTICAR USUARIO
     }
 }

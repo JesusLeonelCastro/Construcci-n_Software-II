@@ -30,7 +30,7 @@
 <div class="card shadow-none border my-4" data-component-card="data-component-card">
     <div class="card-header p-4 border-bottom bg-body">
 
-        <center><h2>GESTION INVENTARIO</h2></center>
+        <center><h2>GESTION INFORMES INVENTARIO</h2></center>
     </div>
     <div class="card-body p-4">
         <!--Contenerdor Card-->
@@ -152,7 +152,7 @@
 
                                     <script>
                                     function generarPDF(informeID) {
-                                        window.location.href = '@Url.Action("GenerarPDF", "Informe")' + '?informeID=' + informeID;
+                                        window.location.href = '@Url.Action("GenerarPDF", "Inventario")' + '?informeID=' + informeID;
                                     }
                                     </script>
 

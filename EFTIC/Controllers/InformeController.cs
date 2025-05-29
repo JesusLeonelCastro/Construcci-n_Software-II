@@ -22,6 +22,7 @@ namespace EFTIC.Controllers
         //private Usuario objusuario = new Usuario();
 
 
+        //Instancia a las Clases
         private Falla objfalla = new Falla();
 
         private O_Actividades objo_Actividades = new O_Actividades();
@@ -60,9 +61,6 @@ namespace EFTIC.Controllers
 
             var equipo = objequipo.Listar();
             ViewBag.equipo = equipo;
-
-            //var usuario = objusuario.Listar();
-            //ViewBag.usuario = usuario;
 
 
             if (criterio == null || criterio == "")
@@ -231,7 +229,7 @@ namespace EFTIC.Controllers
             };
             document.Add(title);
 
-            iTextSharp.text.Paragraph subtitle = new iTextSharp.text.Paragraph($"N° 0{informeID} - 2024\n\n", titleFont)
+            iTextSharp.text.Paragraph subtitle = new iTextSharp.text.Paragraph($"N° 0{informeID} - 2025\n\n", titleFont)
             {
                 Alignment = iTextSharp.text.Element.ALIGN_CENTER
             };
@@ -404,10 +402,13 @@ namespace EFTIC.Controllers
             table.AddCell(subtitleCell);
         }
 
+
         private Informes ObtenerInformePorID(int informeID)
         {
 
             return db.Informes.Find(informeID);
         }
+
+        //RF-009 - Requerimiento funcional - Nuevo Informe 
     }
 }

@@ -53,27 +53,6 @@ namespace EFTIC.Models
 
         public virtual Sede Sede { get; set; }
 
-        //Listar_Usuario
-        //public List<Usuario> Listar()
-        //{
-        //    var ObjUsuario = new List<Usuario>();
-        //    try
-        //    {
-        //        using (var db = new Model1())
-        //        {
-        //            ObjUsuario = db.Usuario.ToList();
-        //            ObjUsuario = db.Usuario.Include(a => a.Sede).ToList();
-        //            ObjUsuario = db.Usuario.Include(a => a.Area).ToList();
-
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine("Error en Listar(): " + ex.Message);
-        //        throw;
-        //    }
-        //    return ObjUsuario;
-        //}
 
         //Listar_Usuario
         public List<Usuario> Listar(Model1 context = null)
@@ -84,8 +63,8 @@ namespace EFTIC.Models
                 using (var db = context ?? new Model1())
                 {
                     ObjUsuario = db.Usuario
-                                   .Include(a => a.Sede)  // Incluir relación con Sede
-                                   .Include(a => a.Area)  // Incluir relación con Area
+                                   .Include(a => a.Sede)  // Incluir relaciï¿½n con Sede
+                                   .Include(a => a.Area)  // Incluir relaciï¿½n con Area
                                    .ToList();
                 }
             }
@@ -134,12 +113,7 @@ namespace EFTIC.Models
                        .Include("Area")
                        .Where(x => x.UsuarioID == id)
                        .SingleOrDefault();
-
-
-
                 }
-
-
             }
             catch (Exception ex)
             {
@@ -198,6 +172,7 @@ namespace EFTIC.Models
         }
 
 
+        //Instancis con la BD
         Model1 db = new Model1();
 
         //Autenticar_Login_Usuario
@@ -228,5 +203,7 @@ namespace EFTIC.Models
             }
             return usuario;
         }
+
+        //RF - 001 - REQUERIEMINTO FUNCIONAL - "USUARIOS"
     }
 }

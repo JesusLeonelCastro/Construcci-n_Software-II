@@ -44,7 +44,7 @@ namespace EFTIC_TEST
             var mockContext = new Mock<Model1>();
             mockContext.Setup(c => c.Area).Returns(mockSetArea.Object);
 
-            var areaService = new Area(); // Asegúrate de usar la clase correcta que contiene el método Listar.
+            var areaService = new Area(); //  usar la clase correcta que contiene el método Listar.
 
         }
 

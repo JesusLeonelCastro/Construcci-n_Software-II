@@ -44,27 +44,7 @@ namespace EFTIC.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Usuario> Usuario { get; set; }
 
-        ////Listar_Area 
-        //public List<Area> Listar()
-        //{
-        //    var ObjArea = new List<Area>();
-        //    try
-        //    {
-        //        using (var db = new Model1())
-        //        {
-        //            ObjArea = db.Area.ToList();
-        //            ObjArea = db.Area.Include(a => a.Sede).ToList();
-
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine("Error en Listar(): " + ex.Message);
-        //        throw;
-        //    }
-        //    return ObjArea;
-        //}
-
+       
         //Listar_Area
         public List<Area> Listar(Model1 context = null)
         {
@@ -74,7 +54,7 @@ namespace EFTIC.Models
                 using (var db = context ?? new Model1())
                 {
                     ObjArea = db.Area
-                                   .Include(a => a.Sede)  // Incluir relación con Sede
+                                   .Include(a => a.Sede)  // Incluir relaciï¿½n con Sede
                                    .ToList();
                 }
             }

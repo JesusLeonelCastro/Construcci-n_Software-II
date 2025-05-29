@@ -178,6 +178,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AreaController.cs" />
+    <Compile Include="Controllers\AsignarController.cs" />
     <Compile Include="Controllers\AutenticationController.cs" />
     <Compile Include="Controllers\Equipo_RetiradoController.cs" />
     <Compile Include="Controllers\EstadosController.cs" />
@@ -236,6 +237,7 @@
     <Content Include="Views\Inventario\AgregarEditar.cshtml" />
     <Content Include="Views\Equipo_Retirado\Index.cshtml" />
     <Content Include="Views\Equipo_Retirado\AgregarEditar.cshtml" />
+    <Content Include="Views\Asignar\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -112,6 +112,8 @@ namespace EFTIC.Controllers
             ViewBag.inventarioPorArea = inventarioPorAreaConNombre;
 
 
+            
+
             return View();
         }
     }
