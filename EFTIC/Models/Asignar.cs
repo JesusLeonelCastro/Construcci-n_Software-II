@@ -27,7 +27,6 @@ namespace EFTIC.Models
         public virtual Usuario Usuario { get; set; }
 
         //Listar Asignar
-
         public List<Asignar> Listar(Model1 context = null)
         {
             var ObjAsignar = new List<Asignar>();
