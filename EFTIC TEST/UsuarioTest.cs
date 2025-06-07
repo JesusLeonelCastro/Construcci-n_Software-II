@@ -228,7 +228,23 @@ namespace EFTIC_TEST
         }
 
 
+        [TestMethod]
+        public void Agregar_Usuario()
+        {
 
-        
+        }
+        [TestMethod]
+
+        public void Guardar_USuario()
+        {
+
+        }
+        [TestMethod]
+
+        public void Guardar_Eliminar()
+        {
+
+        }
+
     }
 }

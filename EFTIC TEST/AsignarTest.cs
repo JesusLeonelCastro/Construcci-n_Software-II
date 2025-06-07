@@ -119,6 +119,23 @@ namespace EFTIC_TEST
 
 
 
+        [TestMethod]
+        public void Agregar_Asignar()
+        {
+
+        }
+        [TestMethod]
+
+        public void Guardar_Asignar()
+        {
+
+        }
+        [TestMethod]
+
+        public void Eliminar_Asignar()
+        {
+
+        }
 
     }
 

@@ -15,8 +15,26 @@ namespace EFTIC_TEST
         [TestMethod]
         public void Listar_RetornaListaCompletaConRelaciones()
         {
-
+            
         }
 
+
+        [TestMethod]
+        public void Agregar_Inventario()
+        {
+
+        }
+        [TestMethod]
+
+        public void Guardar_Inventario()
+        {
+
+        }
+        [TestMethod]
+
+        public void Eliminar_Inventario()
+        {
+
+        }
     }
 }

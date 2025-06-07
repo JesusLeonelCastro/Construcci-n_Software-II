@@ -40,5 +40,22 @@ namespace EFTIC_TEST
 
             
         }
+        [TestMethod]
+        public void Agregar_Otros()
+        {
+
+        }
+        [TestMethod]
+
+        public void Guardar_Otros()
+        {
+
+        }
+        [TestMethod]
+
+        public void Eliminar_Otros()
+        {
+
+        }
     }
 }

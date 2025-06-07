@@ -43,5 +43,24 @@ namespace EFTIC_TEST
             Assert.AreEqual("Estado 1", resultado[0].Nombre_Estado); 
             Assert.AreEqual("Estado 2", resultado[1].Nombre_Estado); // Verifica el nombre del segundo estado
         }
+
+
+        [TestMethod]
+        public void Agregar_Estado()
+        {
+
+        }
+        [TestMethod]
+
+        public void Guardar_Estadoo()
+        {
+
+        }
+        [TestMethod]
+
+        public void Eliminar_Estado()
+        {
+
+        }
     }
 }

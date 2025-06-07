@@ -43,5 +43,23 @@ namespace EFTIC_TEST
             Assert.AreEqual("Falla 1", resultado[0].Descripcion_Falla); // Verifica la descripción de la primera falla
             Assert.AreEqual("Falla 2", resultado[1].Descripcion_Falla); // Verifica la descripción de la segunda falla
         }
+
+        [TestMethod]
+        public void Agregar_Fallas()
+        {
+
+        }
+        [TestMethod]
+
+        public void Guardar_Falla()
+        {
+
+        }
+        [TestMethod]
+
+        public void Eliminar_Falla()
+        {
+
+        }
     }
 }

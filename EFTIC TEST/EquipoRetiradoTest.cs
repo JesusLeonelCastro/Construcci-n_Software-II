@@ -44,5 +44,26 @@ namespace EFTIC_TEST
             Assert.AreEqual("Equipo 2", resultado[1].Nombre_Equipo); // Verifica el nombre del segundo equipo
         }
 
+
+
+
+        [TestMethod]
+        public void Agregar_EquipoRetirado()
+        {
+
+        }
+        [TestMethod]
+
+        public void Guardar_EquipoRetirado()
+        {
+
+        }
+        [TestMethod]
+
+        public void Eliminar_EquipoRetirado()
+        {
+
+        }
+
     }
 }

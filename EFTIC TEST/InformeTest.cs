@@ -43,5 +43,30 @@ namespace EFTIC_TEST
             //Assert.Equal("Sede 1", result[0].Sede.Nombre_Sede);
             //Assert.Equal("Equipo 1", result[0].Tipo_Equipo.Nombre_Tipo_Equipo);
         }
+
+
+        [TestMethod]
+        public void Agregar_Informe()
+        {
+
+        }
+        [TestMethod]
+
+        public void Guardar_Informea()
+        {
+
+        }
+        [TestMethod]
+
+        public void Eliminar_Informe()
+        {
+
+        }
+        [TestMethod]
+
+        public void Actulizar_Infomee()
+        {
+
+        }
     }
 }

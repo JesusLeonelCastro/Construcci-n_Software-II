@@ -125,5 +125,23 @@ namespace EFTIC_TEST
 
             
         }
+
+        [TestMethod]
+        public void Agregar_Ssede()
+        {
+
+        }
+        [TestMethod]
+
+        public void Guardar_Sedee()
+        {
+
+        }
+        [TestMethod]
+
+        public void Eliminar_Sede()
+        {
+
+        }
     }
 }

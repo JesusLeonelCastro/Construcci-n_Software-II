@@ -124,6 +124,22 @@ namespace EFTIC_TEST
             // 3. ASSERT - El atributo ExpectedException maneja la verificación
         }
 
-       
+        [TestMethod]
+        public void Agregar_Area()
+        {
+
+        }
+        [TestMethod]
+
+        public void Guardar_Area()
+        {
+
+        }
+        [TestMethod]
+
+        public void Eliminar_Area()
+        {
+
+        }
     }
 }

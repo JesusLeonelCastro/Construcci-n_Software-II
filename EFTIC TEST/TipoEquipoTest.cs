@@ -43,5 +43,23 @@ namespace EFTIC_TEST
             Assert.AreEqual("Tipo 2", resultado[1].Nombre_Tipo_Equipo); // Verifica el nombre del segundo tipo de equipo
 
         }
+
+        [TestMethod]
+        public void Agregar_TipoEquipo()
+        {
+
+        }
+        [TestMethod]
+
+        public void Guardar_TipoEquipo()
+        {
+
+        }
+        [TestMethod]
+
+        public void Eliminar_TipoEquipo()
+        {
+
+        }
     }
 }
