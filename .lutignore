@@ -1,0 +1,98 @@
+## Live Unit Testing usa el archivo .lutignore para omitir los archivos temporales de Visual Studio, los resultados de la compilación,
+## y los archivos generados por complementos populares de Visual Studio al crear una copia privada del árbol de origen que
+## Live Unit Testing usa para su compilación.
+##
+## Este archivo tiene el mismo formato que el archivo .gitignore de Git (https://git-scm.com/docs/gitignore). De hecho, en el
+## caso de que no se encuentre un archivo .lutignore, pero sí un archivo .gitignore, Live Unit Testing usará el
+## archivo .gitignore directamente para el propósito anterior.
+
+# Archivos específicos del usuario
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+.vs/
+.vscode/
+.packages/
+.dotnet/
+.tools/
+.idea/
+
+# Resultados de la compilación
+[Dd]ebug/
+[Rr]elease/
+[Bb]inaries/
+[Bb]in/
+[Oo]bj/
+x64/
+TestResults/
+
+# Depurar artefactos
+launchSettings.json
+
+# Directorio de Click-Once
+publish/
+
+# Publicar salida web
+*.Publish.xml
+
+# NuGet
+packages/
+[Nn]u[Gg]et.exe
+*-packages.config
+*.nuget.props
+*.nuget.targets
+project.lock.json
+msbuild.binlog
+*.project.lock.json
+
+# Varios
+*_i.c
+*_p.c
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.wrn
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.scc
+sql/
+*.Cache
+ClientBin/
+[Ss]tyle[Cc]op.*
+~$*
+*~
+*.dbmdl
+*.[Pp]ublish.xml
+*.pfx
+*.publishsettings
+
+# Archivos temporales y de caché
+ipch/
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.opendb
+*.VC.db
+AppPackages/
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings
+$RECYCLE.BIN/
+.DS_Store
+*wpftmp.*

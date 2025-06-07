@@ -172,3 +172,61 @@ D:\v9\v7\EFTIC TEST\obj\Debug\EFTIC TEST.csproj.CoreCompileInputs.cache
 D:\v9\v7\EFTIC TEST\obj\Debug\EFTIC TEST.csproj.CopyComplete
 D:\v9\v7\EFTIC TEST\obj\Debug\EFTIC TEST.dll
 D:\v9\v7\EFTIC TEST\obj\Debug\EFTIC TEST.pdb
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\es\Microsoft.TestPlatform.AdapterUtilities.resources.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\EFTIC TEST.dll.config
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\EFTIC TEST.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\EFTIC TEST.pdb
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\Castle.Core.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\EFTIC.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\EntityFramework.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\Moq.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\System.Web.Mvc.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\itextsharp.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\System.Web.WebPages.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\System.Web.Razor.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\EFTIC.pdb
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\EFTIC.dll.config
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\Castle.Core.xml
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\EntityFramework.xml
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\System.Web.Mvc.xml
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\itextsharp.xml
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\System.Web.WebPages.xml
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\System.Web.Razor.xml
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\es\System.Web.Mvc.resources.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\es\System.Web.WebPages.resources.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\es\System.Web.Razor.resources.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\bin\Debug\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\obj\Debug\EFTIC TEST.csproj.AssemblyReference.cache
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\obj\Debug\EFTIC TEST.csproj.CoreCompileInputs.cache
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\obj\Debug\EFTIC TEST.csproj.Up2Date
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\obj\Debug\EFTIC TEST.dll
+C:\Users\jesca\Desktop\ConstruccionII\EFTIC TEST\obj\Debug\EFTIC TEST.pdb

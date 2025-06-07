@@ -282,12 +282,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
@@ -324,7 +320,7 @@
               "RelativeDocumentMoniker": "..\\EFTIC TEST\\AsignarTest.cs",
               "ToolTip": "C:\\Users\\jesca\\Desktop\\ConstruccionII\\EFTIC TEST\\AsignarTest.cs",
               "RelativeToolTip": "..\\EFTIC TEST\\AsignarTest.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAAAHwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAqwGgAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-07T14:48:54.789Z",
               "EditorCaption": ""
