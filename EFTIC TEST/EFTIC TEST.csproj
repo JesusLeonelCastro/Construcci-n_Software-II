@@ -80,6 +80,7 @@
     <Compile Include="InformeTest.cs" />
     <Compile Include="OtrosTest.cs" />
     <Compile Include="AsignarTest.cs" />
+    <Compile Include="InventarioTest.cs" />
     <Compile Include="UsuarioTest.cs" />
   </ItemGroup>
   <ItemGroup>
