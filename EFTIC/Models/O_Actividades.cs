@@ -10,6 +10,42 @@ namespace EFTIC.Models
 
     public partial class O_Actividades
     {
+        /*
+         * ------------------------------------------------------------
+         * ENTIDAD: O_Actividades.cs
+         * UBICACIÓN: EFTIC.Models
+         * AUTOR: Jesús Leonel Castro Gutiérrez
+         * FECHA DE DESARROLLO: 01/04/2025 al 20/06/2025
+         * 
+         * DESCRIPCIÓN GENERAL:
+         * Este archivo define la clase de entidad `O_Actividades`, la cual representa 
+         * las otras actividades técnicas o complementarias vinculadas a los informes 
+         * técnicos generados en el sistema EFTIC.
+         * 
+         * FUNCIONALIDADES IMPLEMENTADAS:
+         * - CRUD completo: Listar, Buscar, Obtener, Guardar y Eliminar actividades.
+         * - Soporte para relación 1:N con la entidad `Informes`.
+         * - Uso de `DbContext` con la clase `Model1` para acceso a datos mediante Entity Framework 6.
+         * 
+         * CAMPOS CLAVE:
+         * - `O_ActividadesID`: Clave primaria de la entidad.
+         * - `Nombre_O_Actividad`: Nombre descriptivo de la actividad técnica.
+         * - `Descripcion_O_Actividad`: Detalle adicional de la actividad realizada.
+         * 
+         * RELACIONES:
+         * - Relación de navegación con `Informes` mediante una colección virtual.
+         * 
+         * NOTAS DE DESARROLLO:
+         * - El uso de `context = null` permite inyectar un contexto externo si es necesario.
+         * - Se emplea control de excepciones en cada operación para mayor estabilidad.
+         * 
+         * REFERENCIA:
+         * -
+         * 
+         * ------------------------------------------------------------
+         */
+
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public O_Actividades()
         {

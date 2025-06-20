@@ -10,6 +10,40 @@ namespace EFTIC.Models
 
     public partial class Tipo_Equipo
     {
+        /*
+         * ------------------------------------------------------------
+         * CLASE: Tipo_Equipo.cs
+         * UBICACIÓN: EFTIC.Models
+         * AUTOR: Jesús Leonel Castro Gutiérrez
+         * FECHA DE DESARROLLO: 01/04/2025 al 20/06/2025
+         * 
+         * DESCRIPCIÓN GENERAL:
+         * Representa la entidad `Tipo_Equipo`, utilizada para clasificar los equipos registrados 
+         * en los informes técnicos y el inventario del sistema EFTIC.
+         * 
+         * FUNCIONALIDADES IMPLEMENTADAS:
+         * - Propiedades de la entidad Tipo_Equipo.
+         * - Relaciones uno-a-muchos con `Informes` e `Inventario`.
+         * - Métodos CRUD (Listar, Buscar, Obtener, Guardar, Eliminar).
+         * 
+         * MÉTODOS DESTACADOS:
+         * - `Listar()`: Retorna todos los tipos de equipos registrados.
+         * - `Buscar(string criterio)`: Busca tipos de equipos por nombre.
+         * - `Obtener(int id)`: Obtiene un tipo de equipo específico por su ID.
+         * - `Guardar()`: Inserta o actualiza un tipo de equipo.
+         * - `Eliminar()`: Elimina un tipo de equipo existente.
+         * 
+         * NOTAS DE IMPLEMENTACIÓN:
+         * - Integra Entity Framework 6 con `DbContext` (`Model1`).
+         * - Las propiedades de navegación están inicializadas en el constructor.
+         * - Decorado con anotaciones de datos (`[StringLength]`).
+         * 
+         * REQUERIMIENTO RELACIONADO:
+         * - RF-003 - Requerimiento Funcional - Registro de Tipos de Equipos
+         * ------------------------------------------------------------
+         */
+
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Tipo_Equipo()
         {

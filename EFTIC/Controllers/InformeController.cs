@@ -17,6 +17,43 @@ namespace EFTIC.Controllers
     [Authorize]
     public class InformeController : Controller
     {
+        /*
+         * ------------------------------------------------------------
+         * CONTROLADOR: InformeController.cs
+         * PROPÓSITO: Gestiona todas las operaciones relacionadas con los informes técnicos.
+         * AUTOR: Jesús Leonel Castro Gutiérrez
+         * FECHA DE DESARROLLO: 01/09/2024 al 15/06/2025
+         * 
+         * DESCRIPCIÓN GENERAL:
+         * Este controlador administra la lógica del módulo de informes técnicos dentro del sistema EFTIC. 
+         * Permite listar, buscar, ver, crear, editar, eliminar y generar informes en formato PDF.
+         * Está orientado a facilitar el seguimiento de fallas y soporte informático, con estructura 
+         * formal e institucional en los reportes generados.
+         * 
+         * FUNCIONALIDADES:
+         * - Listar todos los informes registrados.
+         * - Buscar informes por criterio de texto.
+         * - Visualizar el detalle de un informe técnico.
+         * - Agregar o editar un informe con campos precargados desde otras entidades (área, sede, tipo de equipo, etc.).
+         * - Eliminar informes existentes.
+         * - Generar un informe técnico en formato PDF con diseño estructurado, logotipos, secciones, y firma.
+         * 
+         * BUENAS PRÁCTICAS IMPLEMENTADAS:
+         * - Uso del patrón MVC para separar lógica de negocio, vista y modelo.
+         * - Control de acceso mediante [Authorize] para proteger acciones.
+         * - Inyección de datos a la vista mediante `ViewBag` para listas desplegables dinámicas.
+         * - Validación de modelos con `ModelState.IsValid` antes de guardar datos.
+         * - Uso de `TempData` para notificaciones al usuario después de guardar o eliminar.
+         * - Generación de PDF utilizando la librería iTextSharp con tablas, estilos, imágenes y contenido dinámico.
+         * 
+         * NOTAS:
+         * - El controlador podría beneficiarse en el futuro de una capa de servicios para desacoplar lógica de generación de PDFs.
+         * - Las llamadas repetidas a `.Listar()` en el método `Index` pueden optimizarse con caché o una capa intermedia si el volumen crece.
+         * - Se recomienda implementar control de errores para mejorar la robustez (try-catch).
+         * ------------------------------------------------------------
+         */
+
+
         private Informes objinformes = new Informes();
         
         //private Usuario objusuario = new Usuario();

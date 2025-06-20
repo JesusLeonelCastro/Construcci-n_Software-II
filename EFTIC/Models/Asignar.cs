@@ -1,5 +1,6 @@
 namespace EFTIC.Models
 {
+
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -11,6 +12,44 @@ namespace EFTIC.Models
     [Table("Asignar")]
     public partial class Asignar
     {
+        /*
+         * ------------------------------------------------------------
+         * MODELO: Asignar.cs
+         * UBICACIÓN: EFTIC.Models
+         * AUTOR: Jesús Leonel Castro Gutiérrez
+         * FECHA DE DESARROLLO: 01/09/2024 al 15/06/2025
+         * 
+         * DESCRIPCIÓN GENERAL:
+         * Representa la entidad "Asignar" en el sistema EFTIC, utilizada
+         * para registrar y gestionar la asignación de equipos informáticos 
+         * (inventario) a usuarios dentro de un área determinada.
+         * 
+         * FUNCIONALIDADES IMPLEMENTADAS:
+         * - Listar todas las asignaciones con relaciones a Usuario, Área e Inventario.
+         * - Obtener una asignación específica por su ID.
+         * - Registrar una nueva asignación o actualizar una existente.
+         * - Eliminar una asignación del sistema.
+         * 
+         * RELACIONES:
+         * - FK con Usuario, Área e Inventario (muchas asignaciones pueden compartir relaciones).
+         * - Carga las relaciones con `Include` para optimizar las vistas.
+         * 
+         * BUENAS PRÁCTICAS UTILIZADAS:
+         * - Manejo de errores con try-catch
+         * - Reutilización de contexto con opción de inyección externa
+         * - Patrón Entity Framework para la persistencia de datos
+         * - Separación clara de responsabilidades por método
+         * 
+         * REQUERIMIENTO FUNCIONAL RELACIONADO:
+         * - RF-006 - Gestión de Asignaciones de Equipos
+         * 
+         * NOTA:
+         * - Requiere el using de `System.Data.Entity` para poder ejecutar `Include()`
+         * 
+         * ------------------------------------------------------------
+         */
+
+
         public int AsignarID { get; set; }
 
         public int? AreaID { get; set; }

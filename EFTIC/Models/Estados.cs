@@ -11,6 +11,43 @@ namespace EFTIC.Models
 
     public partial class Estados
     {
+        /*
+         * ------------------------------------------------------------
+         * MODELO: Estados.cs
+         * UBICACIÓN: EFTIC.Models
+         * AUTOR: Jesús Leonel Castro Gutiérrez
+         * FECHA DE DESARROLLO: 01/04/2025 al 15/06/2025
+         * 
+         * DESCRIPCIÓN GENERAL:
+         * Clase que representa los diferentes estados asociados a un informe, 
+         * como por ejemplo: "Pendiente", "Revisado", "Aprobado", etc. 
+         * Se utiliza para categorizar el estado de los equipos o reportes dentro del sistema.
+         * 
+         * FUNCIONALIDADES IMPLEMENTADAS:
+         * - Listar todos los estados existentes.
+         * - Buscar estados por nombre.
+         * - Obtener un estado específico por ID.
+         * - Guardar o actualizar registros.
+         * - Eliminar un estado del sistema.
+         * 
+         * RELACIONES:
+         * - Relación uno a muchos con la entidad `Informes`.
+         * 
+         * BUENAS PRÁCTICAS UTILIZADAS:
+         * - Separación clara de responsabilidades.
+         * - Manejo controlado de excepciones.
+         * - Inyección opcional de contexto `Model1` para facilitar pruebas y reutilización.
+         * 
+         * REQUERIMIENTO FUNCIONAL RELACIONADO:
+         * - RF-006 - Gestión de Estados de Informes
+         * 
+         * NOTA:
+         * - Este modelo es clave para el flujo de control de reportes técnicos dentro del módulo de inventario.
+         * 
+         * ------------------------------------------------------------
+         */
+
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Estados()
         {

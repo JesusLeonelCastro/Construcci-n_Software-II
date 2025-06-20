@@ -11,6 +11,43 @@ namespace EFTIC.Models
     [Table("Falla")]
     public partial class Falla
     {
+        /*
+         * ------------------------------------------------------------
+         * MODELO: Falla.cs
+         * UBICACIÓN: EFTIC.Models
+         * AUTOR: Jesús Leonel Castro Gutiérrez
+         * FECHA DE DESARROLLO: 01/04/2025 al 15/06/2025
+         * 
+         * DESCRIPCIÓN GENERAL:
+         * Clase que representa los diferentes tipos de fallas o problemas reportados 
+         * en los informes técnicos de equipos. Permite categorizar y clasificar 
+         * incidencias registradas por el personal técnico.
+         * 
+         * FUNCIONALIDADES IMPLEMENTADAS:
+         * - Listar todas las fallas registradas.
+         * - Buscar fallas por nombre.
+         * - Obtener una falla específica por su ID.
+         * - Guardar (crear o actualizar) una falla.
+         * - Eliminar un registro de falla.
+         * 
+         * RELACIONES:
+         * - Relación uno a muchos con la entidad `Informes`.
+         * 
+         * BUENAS PRÁCTICAS UTILIZADAS:
+         * - Uso opcional del contexto `Model1` para facilitar pruebas unitarias.
+         * - Manejo controlado de errores.
+         * - Estructura clara para operaciones CRUD.
+         * 
+         * REQUERIMIENTO FUNCIONAL RELACIONADO:
+         * - RF-007 - Gestión de Fallas Técnicas
+         * 
+         * NOTA:
+         * - Este modelo es clave para el seguimiento de causas y patrones recurrentes 
+         *   de fallas en los activos tecnológicos del sistema.
+         * 
+         * ------------------------------------------------------------
+         */
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Falla()
         {

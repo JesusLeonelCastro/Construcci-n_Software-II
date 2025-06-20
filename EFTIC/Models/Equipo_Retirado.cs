@@ -10,6 +10,43 @@ namespace EFTIC.Models
 
     public partial class Equipo_Retirado
     {
+        /*
+         * ------------------------------------------------------------
+         * MODELO: Equipo_Retirado.cs
+         * UBICACIÓN: EFTIC.Models
+         * AUTOR: Jesús Leonel Castro Gutiérrez
+         * FECHA DE DESARROLLO: 01/04/2025 al 15/06/2025
+         * 
+         * DESCRIPCIÓN GENERAL:
+         * Representa la entidad "Equipo_Retirado" dentro del sistema EFTIC, 
+         * utilizada para registrar información sobre equipos informáticos 
+         * que han sido dados de baja o retirados del inventario activo.
+         * 
+         * FUNCIONALIDADES IMPLEMENTADAS:
+         * - Listar todos los equipos retirados.
+         * - Buscar por nombre de equipo.
+         * - Obtener un equipo retirado por su ID.
+         * - Registrar nuevos equipos retirados o actualizar existentes.
+         * - Eliminar un registro de equipo retirado del sistema.
+         * 
+         * RELACIONES:
+         * - Relación con la entidad `Informes`, permitiendo su trazabilidad documental.
+         * 
+         * BUENAS PRÁCTICAS UTILIZADAS:
+         * - Uso de `try-catch` para manejo de excepciones controladas.
+         * - Métodos desacoplados para responsabilidad única.
+         * - Flexibilidad con inyección opcional de contexto (`Model1`).
+         * 
+         * REQUERIMIENTO FUNCIONAL RELACIONADO:
+         * - RF-007 - Gestión de Equipos Retirados
+         * 
+         * NOTA:
+         * - Validaciones adicionales podrían incorporarse a nivel de vista o controlador.
+         * 
+         * ------------------------------------------------------------
+         */
+
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Equipo_Retirado()
         {

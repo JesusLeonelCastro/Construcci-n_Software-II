@@ -12,6 +12,43 @@ namespace EFTIC.Controllers
 {
     public class InventarioController : Controller
     {
+        /*
+         * ------------------------------------------------------------
+         * CONTROLADOR: InventarioController.cs
+         * PROPÓSITO: Gestionar el inventario de equipos informáticos.
+         * AUTOR: Jesús Leonel Castro Gutiérrez
+         * FECHA DE DESARROLLO: 01/09/2024 al 15/06/2025
+         * 
+         * DESCRIPCIÓN GENERAL:
+         * Este controlador administra el módulo de inventario dentro del sistema EFTIC, permitiendo 
+         * registrar, actualizar, consultar y eliminar información sobre equipos informáticos 
+         * asignados a áreas y sedes institucionales. Incluye la capacidad de exportar la información 
+         * individual de inventario a un archivo PDF estructurado y con diseño formal.
+         * 
+         * FUNCIONALIDADES:
+         * - Listar todos los registros de inventario.
+         * - Buscar registros por criterio de texto.
+         * - Visualizar el detalle de un equipo registrado.
+         * - Agregar o editar equipos de inventario con datos complementarios (sede, área, tipo).
+         * - Eliminar registros.
+         * - Exportar datos de un equipo a un archivo PDF con formato de ficha técnica.
+         * 
+         * BUENAS PRÁCTICAS IMPLEMENTADAS:
+         * - Separación de lógica según el patrón MVC.
+         * - Validación de datos con ModelState y asignación de valores por defecto en campos vacíos.
+         * - Envío de alertas mediante TempData para notificar acciones al usuario.
+         * - Generación de reportes PDF con iTextSharp, incluyendo logos, tablas y formato institucional.
+         * - Inyección de listas dinámicas a la vista mediante ViewBag.
+         * 
+         * NOTAS:
+         * - Se recomienda optimizar las llamadas a `.Listar()` si se amplía el volumen de datos.
+         * - Considerar validaciones adicionales a nivel de base de datos para garantizar integridad.
+         * - Puede implementarse paginación y filtros avanzados en el `Index` para mejorar la usabilidad.
+         * 
+         * ------------------------------------------------------------
+         */
+
+
         private Inventario objinventario = new Inventario();
 
         private Area objarea = new Area();

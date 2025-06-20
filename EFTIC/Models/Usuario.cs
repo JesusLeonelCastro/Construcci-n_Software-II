@@ -12,6 +12,43 @@ namespace EFTIC.Models
     [Table("Usuario")]
     public partial class Usuario
     {
+        /*
+         * ------------------------------------------------------------
+         * CLASE: Usuario.cs
+         * UBICACIÓN: EFTIC.Models
+         * AUTOR: Jesús Leonel Castro Gutiérrez
+         * FECHA DE DESARROLLO: 01/04/2025 al 20/06/2025
+         * 
+         * DESCRIPCIÓN GENERAL:
+         * Representa la entidad `Usuario`, utilizada para gestionar los datos de los usuarios 
+         * del sistema EFTIC, incluyendo su autenticación, sede, área y tipo de usuario.
+         * 
+         * FUNCIONALIDADES IMPLEMENTADAS:
+         * - Propiedades básicas de identificación, autenticación y relación con otras entidades.
+         * - Relaciones con `Sede`, `Area`, `Asignar` e `Informes`.
+         * - Métodos CRUD para la gestión de usuarios.
+         * - Métodos adicionales para autenticación y obtención de datos por login.
+         * 
+         * MÉTODOS DESTACADOS:
+         * - `Listar()`: Lista todos los usuarios con sus respectivas sedes y áreas.
+         * - `Buscar(string criterio)`: Filtra usuarios por nombre.
+         * - `Obtener(int id)`: Recupera un usuario por su ID, incluyendo sus relaciones.
+         * - `Guardar()`: Crea o actualiza un usuario.
+         * - `Eliminar()`: Elimina un usuario existente.
+         * - `Autenticar()`: Valida las credenciales del usuario mediante su DNI y contraseña.
+         * - `ObtenerDatos(string correo)`: Estructura para recuperación de datos por correo.
+         * 
+         * NOTAS DE IMPLEMENTACIÓN:
+         * - Usa Entity Framework 6 (`Model1`) como contexto.
+         * - Compatible con autenticación básica mediante DNI y contraseña.
+         * - Preparado para futuras extensiones como recuperación de contraseña o tokens.
+         * 
+         * REQUERIMIENTO RELACIONADO:
+         * - RF-001 - Requerimiento Funcional - Gestión de Usuarios
+         * ------------------------------------------------------------
+         */
+
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Usuario()
         {

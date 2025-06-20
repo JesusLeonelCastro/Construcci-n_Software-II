@@ -10,6 +10,44 @@ namespace EFTIC.Models
 
     public partial class Informes
     {
+        /*
+         * ------------------------------------------------------------
+         * MODELO: Informes.cs
+         * UBICACIÓN: EFTIC.Models
+         * AUTOR: Jesús Leonel Castro Gutiérrez
+         * FECHA DE DESARROLLO: 01/04/2025 al 20/06/2025
+         * 
+         * DESCRIPCIÓN GENERAL:
+         * Representa los informes técnicos generados por el personal del área de soporte,
+         * que documentan diagnósticos, soluciones aplicadas y características de los equipos
+         * intervenidos. Este modelo es uno de los ejes centrales del sistema de gestión técnica.
+         * 
+         * FUNCIONALIDADES IMPLEMENTADAS:
+         * - Listar informes con relaciones a múltiples entidades (Área, Sede, Falla, etc.).
+         * - Buscar informes por título.
+         * - Obtener detalles completos de un informe por ID, incluyendo datos relacionados.
+         * - Guardar (crear/editar) informes técnicos.
+         * - Eliminar informes.
+         * 
+         * RELACIONES:
+         * - FK con Area, Sede, Usuario, Tipo_Equipo, Estados, Falla, O_Actividades, Equipo_Retirado.
+         * 
+         * OBSERVACIONES:
+         * - El método `Listar()` contiene múltiples llamadas redundantes a `Include()`; 
+         *   podría optimizarse agrupando todas las relaciones en una sola llamada LINQ.
+         * 
+         * REQUERIMIENTO FUNCIONAL RELACIONADO:
+         * - RF-009 - Registro y gestión de informes técnicos.
+         * 
+         * BUENAS PRÁCTICAS:
+         * - Separación clara de responsabilidades.
+         * - Uso de `Include()` para carga explícita de entidades relacionadas.
+         * - Control de errores con manejo de excepciones.
+         * 
+         * ------------------------------------------------------------
+         */
+
+
         [Key]
         public int InformeID { get; set; }
 

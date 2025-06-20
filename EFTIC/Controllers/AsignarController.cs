@@ -10,6 +10,36 @@ namespace EFTIC.Controllers
     
     public class AsignarController : Controller
     {
+        /*
+         * ------------------------------------------------------------
+         * CONTROLADOR: AsignarController.cs
+         * PROPÓSITO: Gestiona las operaciones CRUD para la entidad Asignar.
+         * AUTOR: Jesus leonel Castro Gutierrez
+         * FECHA: 20/11/2024
+         * 
+         * DESCRIPCIÓN GENERAL:
+         * Este controlador forma parte de la arquitectura MVC del sistema EFTIC y 
+         * gestiona la asignación de inventario a usuarios en áreas específicas.
+         * Las funcionalidades incluidas son:
+         * - Listar asignaciones con opción de búsqueda por criterio.
+         * - Agregar o editar asignaciones de manera dinámica.
+         * - Guardar nuevos registros o actualizaciones validadas.
+         * - Eliminar registros de asignaciones.
+         * 
+         * BUENAS PRÁCTICAS IMPLEMENTADAS:
+         * - Separamos responsabilidades siguiendo el patrón MVC.
+         * - Se utiliza el método ViewBag para cargar listas dinámicas (áreas, usuarios, inventarios).
+         * - Se valida el modelo antes de guardar datos persistentes (ModelState.IsValid).
+         * - Se usan alertas con TempData para mejorar la experiencia del usuario.
+         * - El filtrado se realiza de manera segura y clara.
+         * - Código limpio, reutilizable y fácil de mantener.
+         * 
+         * NOTAS:
+         * - Este controlador depende de los modelos Asignar, Usuario, Area e Inventario.
+         * - En sistemas más grandes, se recomienda abstraer la lógica de negocio en servicios o repositorios.
+         * ------------------------------------------------------------
+         */
+
         private Asignar objasignar = new Asignar();
         private Usuario objusuario = new Usuario();
         private Area objarea = new Area();

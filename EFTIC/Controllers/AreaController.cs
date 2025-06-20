@@ -10,6 +10,39 @@ namespace EFTIC.Controllers
     [Authorize]
     public class AreaController : Controller
     {
+        /*
+         * ------------------------------------------------------------
+         * CONTROLADOR: AreaController.cs
+         * PROPÓSITO: Gestiona las operaciones CRUD para la entidad Área.
+         * AUTOR: Jesus leonel Castro Gutierrez
+         * FECHA: 15/11/2024
+         * 
+         * DESCRIPCIÓN GENERAL:
+         * Este controlador implementa la lógica del modelo-vista-controlador (MVC) 
+         * para la gestión de áreas dentro del sistema EFTIC. Incluye funciones para:
+         * - Listar áreas
+         * - Buscar áreas por criterio
+         * - Ver detalle de un área
+         * - Agregar o editar un área
+         * - Guardar cambios
+         * - Eliminar un registro
+         * 
+         * BUENAS PRÁCTICAS:
+         * - Se utiliza el patrón MVC para separación de responsabilidades.
+         * - Las acciones están protegidas con el atributo [Authorize].
+         * - Se emplea TempData para notificaciones del usuario.
+         * - Se validan los modelos antes de persistir cambios.
+         * - Se reutiliza la vista AgregarEditar para mantener coherencia y evitar redundancia.
+         * 
+         * NOTA:
+         * - Este controlador se basa en modelos Area y Sede, los cuales deben implementar 
+         *   los métodos correspondientes como Listar(), Buscar(), Obtener(), Guardar(), Eliminar().
+         * - Considerar el uso de servicios o repositorios para separar la lógica de datos 
+         *   en aplicaciones más grandes.
+         * ------------------------------------------------------------
+         */
+
+
         private Area objarea = new Area();
         private Sede objsede = new Sede();
 

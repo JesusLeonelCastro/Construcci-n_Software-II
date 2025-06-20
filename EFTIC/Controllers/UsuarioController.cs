@@ -12,6 +12,44 @@ namespace EFTIC.Controllers
     [Authorize]
     public class UsuarioController : Controller
     {
+        /*
+         * ------------------------------------------------------------
+         * CONTROLADOR: UsuarioController.cs
+         * PROPÓSITO: Administración de usuarios del sistema EFTIC.
+         * AUTOR: Jesús Leonel Castro Gutiérrez
+         * FECHA DE DESARROLLO: 01/09/2024 al 15/06/2025
+         * 
+         * DESCRIPCIÓN GENERAL:
+         * Este controlador gestiona el CRUD de usuarios que utilizan o administran
+         * el sistema EFTIC. Incluye la integración con el servicio de RENIEC para 
+         * autocompletar datos a partir del DNI ingresado.
+         * 
+         * FUNCIONALIDADES:
+         * - Listado, búsqueda y filtrado de usuarios.
+         * - Registro y edición con integración RENIEC (asíncrona).
+         * - Eliminación de usuarios.
+         * - Visualización detallada de un usuario.
+         * - Carga dinámica de áreas según sede (vía AJAX/JSON).
+         * 
+         * BUENAS PRÁCTICAS IMPLEMENTADAS:
+         * - Validación con `ModelState.IsValid`.
+         * - Separación lógica de capas (servicio RENIEC externo).
+         * - Control de acceso con `[Authorize]`.
+         * - Comunicación cliente-servidor mediante `JsonResult`.
+         * - Inyección del cliente HTTP y uso de `async/await`.
+         * 
+         * NOTAS:
+         * - El servicio RENIEC se consulta solo si se proporciona el DNI.
+         * - Las áreas se filtran dinámicamente por sede en formularios.
+         * - El campo `DNI` es clave para la identificación única.
+         * 
+         * REQUERIMIENTO FUNCIONAL ASOCIADO:
+         * - RF-001 - Administración de Usuarios
+         * 
+         * ------------------------------------------------------------
+         */
+
+
         //Instacion de clases
         private Usuario objusuario = new Usuario();
         private readonly Reniec _reniecService;

@@ -11,6 +11,40 @@ namespace EFTIC.Models
     [Table("Sede")]
     public partial class Sede
     {
+        /*
+         * ------------------------------------------------------------
+         * CLASE: Sede.cs
+         * UBICACIÓN: EFTIC.Models
+         * AUTOR: Jesús Leonel Castro Gutiérrez
+         * FECHA DE DESARROLLO: 01/04/2025 al 20/06/2025
+         * 
+         * DESCRIPCIÓN GENERAL:
+         * Representa la entidad `Sede`, correspondiente a las sedes institucionales 
+         * donde se gestionan los informes, inventarios, usuarios y áreas en el sistema EFTIC.
+         * 
+         * FUNCIONALIDADES IMPLEMENTADAS:
+         * - Propiedades de la entidad Sede.
+         * - Relaciones uno-a-muchos con `Area`, `Informes`, `Inventario` y `Usuario`.
+         * - Métodos CRUD (Listar, Buscar, Obtener, Guardar, Eliminar).
+         * 
+         * MÉTODOS DESTACADOS:
+         * - `Listar()`: Retorna todas las sedes registradas.
+         * - `Buscar(string criterio)`: Filtra sedes por nombre.
+         * - `Obtener(int id)`: Obtiene los detalles de una sede específica.
+         * - `Guardar()`: Inserta o actualiza una sede en la base de datos.
+         * - `Eliminar()`: Elimina una sede del sistema.
+         * 
+         * NOTAS DE IMPLEMENTACIÓN:
+         * - Utiliza Entity Framework 6 (DbContext: Model1).
+         * - Las colecciones relacionadas son inicializadas en el constructor.
+         * - Decorado con atributos de anotación de datos (`[StringLength]`, `[Table]`).
+         * 
+         * REQUERIMIENTO RELACIONADO:
+         * - RF-004 - Requerimiento Funcional - SEDES
+         * ------------------------------------------------------------
+         */
+
+
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Sede()

@@ -10,6 +10,38 @@ namespace EFTIC.Controllers
     [Authorize]
     public class HomeController : Controller
     {
+        /*
+         * ------------------------------------------------------------
+         * CONTROLADOR: HomeController.cs
+         * PROPÓSITO: Controlador principal para la carga del Dashboard del sistema.
+         * AUTOR: Jesús Leonel Castro Gutiérrez
+         * FECHA DE DESARROLLO: 01/09/2024 al 15/06/2025
+         * 
+         * DESCRIPCIÓN GENERAL:
+         * Este controlador carga la vista principal del sistema EFTIC, proporcionando 
+         * una vista general de los datos clave del sistema como informes, inventario, 
+         * fallas, actividades, áreas, estados, sedes, tipos de equipo, etc.
+         * 
+         * FUNCIONALIDADES:
+         * - Mostrar totales de registros de cada entidad (informes, fallas, inventario, etc.).
+         * - Agrupar y mostrar el total de informes por área y por sede.
+         * - Calcular el total de inventario por área.
+         * - Mostrar estadísticas de informes por tipo de equipo.
+         * 
+         * BUENAS PRÁCTICAS IMPLEMENTADAS:
+         * - Uso de ViewBag para enviar múltiples datos a la vista de manera clara.
+         * - Agrupación de datos usando LINQ para generar reportes resumidos.
+         * - Separación de responsabilidades: este controlador solo visualiza datos, no realiza lógica CRUD.
+         * - Código legible, segmentado y reutilizable.
+         * 
+         * NOTAS:
+         * - Para una mejor eficiencia en proyectos a gran escala, se recomienda usar servicios 
+         *   o caché en lugar de múltiples llamadas a `.Listar()`.
+         * - Se podría optimizar el acceso a datos implementando patrones como Repositorio o Unit of Work.
+         * ------------------------------------------------------------
+         */
+
+
         private Informes objinformes = new Informes();
 
         private Falla objfalla = new Falla();

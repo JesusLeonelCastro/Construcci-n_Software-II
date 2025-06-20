@@ -11,6 +11,45 @@ namespace EFTIC.Models
     [Table("Inventario")]
     public partial class Inventario
     {
+        /*
+         * ------------------------------------------------------------
+         * MODELO: Inventario.cs
+         * UBICACIÓN: EFTIC.Models
+         * AUTOR: Jesús Leonel Castro Gutiérrez
+         * FECHA DE DESARROLLO: 01/04/2025 al 20/06/2025
+         * 
+         * DESCRIPCIÓN GENERAL:
+         * Representa los equipos de cómputo registrados en el sistema, incluyendo
+         * características físicas y técnicas como modelo, marca, serie, capacidades,
+         * y datos de red. Permite gestionar el stock tecnológico de la institución.
+         * 
+         * FUNCIONALIDADES IMPLEMENTADAS:
+         * - Listado de equipos incluyendo relaciones con Área, Sede y Tipo de Equipo.
+         * - Búsqueda por código patrimonial.
+         * - Obtención de equipo por ID con carga de relaciones.
+         * - Registro (crear o editar) de nuevos equipos.
+         * - Eliminación de equipos del inventario.
+         * 
+         * RELACIONES:
+         * - FK con Área, Sede y Tipo_Equipo.
+         * - Relación con Asignar (asignación de equipos a usuarios).
+         * 
+         * OBSERVACIONES:
+         * - Los métodos `Listar()` y `Obtener()` tienen múltiples llamadas secuenciales a `Include()`,
+         *   lo cual puede ser optimizado en una sola consulta LINQ para evitar sobrecarga innecesaria.
+         * 
+         * REQUERIMIENTO FUNCIONAL RELACIONADO:
+         * - RF-008 - Gestión de equipos de inventario.
+         * 
+         * BUENAS PRÁCTICAS:
+         * - Uso de `EntityState` para control de cambios en la base de datos.
+         * - Manejo básico de errores con `try-catch`.
+         * - Separación lógica por métodos CRUD.
+         * 
+         * ------------------------------------------------------------
+         */
+
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Inventario()
         {

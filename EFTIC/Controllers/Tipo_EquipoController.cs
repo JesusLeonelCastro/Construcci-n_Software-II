@@ -10,6 +10,40 @@ namespace EFTIC.Controllers
     [Authorize]
     public class Tipo_EquipoController : Controller
     {
+        /*
+         * ------------------------------------------------------------
+         * CONTROLADOR: Tipo_EquipoController.cs
+         * PROPÓSITO: Gestión de los tipos de equipos informáticos en el sistema EFTIC.
+         * AUTOR: Jesús Leonel Castro Gutiérrez
+         * FECHA DE DESARROLLO: 01/09/2024 al 15/06/2025
+         * 
+         * DESCRIPCIÓN GENERAL:
+         * Este controlador administra los tipos de equipos tecnológicos disponibles en la plataforma,
+         * tales como CPUs, impresoras, laptops, entre otros. Permite operaciones CRUD básicas.
+         * 
+         * FUNCIONALIDADES:
+         * - Listado de tipos de equipo.
+         * - Búsqueda textual por nombre.
+         * - Visualización de un tipo específico.
+         * - Registro y edición de nuevos tipos de equipo.
+         * - Eliminación de registros existentes.
+         * 
+         * BUENAS PRÁCTICAS IMPLEMENTADAS:
+         * - Validación del modelo antes del guardado (`ModelState.IsValid`).
+         * - Feedback visual al usuario mediante `TempData`.
+         * - Control de acceso asegurado con `[Authorize]`.
+         * 
+         * NOTAS:
+         * - Los tipos de equipo registrados se relacionan directamente con los informes técnicos,
+         *   inventario y otras entidades clave del sistema.
+         * - El campo `Nombre_Tipo_Equipo` debe mantenerse único y representativo.
+         * 
+         * REQUERIMIENTO FUNCIONAL ASOCIADO:
+         * - RF-005 - Administración de catálogo de tipos de equipos.
+         * 
+         * ------------------------------------------------------------
+         */
+
         private Tipo_Equipo objtipo_equipso = new Tipo_Equipo();
 
         public ActionResult Index(string criterio)

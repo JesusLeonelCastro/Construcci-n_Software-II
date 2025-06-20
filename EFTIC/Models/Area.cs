@@ -11,6 +11,43 @@ namespace EFTIC.Models
     [Table("Area")]
     public partial class Area
     {
+        /*
+         * ------------------------------------------------------------
+         * MODELO: Area.cs
+         * UBICACIÓN: EFTIC.Models
+         * AUTOR: Jesús Leonel Castro Gutiérrez
+         * FECHA DE DESARROLLO: 01/09/2024 al 15/06/2025
+         * 
+         * DESCRIPCIÓN GENERAL:
+         * Representa la entidad "Área" dentro del sistema de gestión 
+         * de inventario y usuarios EFTIC. Cada área pertenece a una sede 
+         * y puede estar asociada a múltiples objetos como inventario, usuarios, 
+         * informes y asignaciones.
+         * 
+         * FUNCIONALIDADES IMPLEMENTADAS:
+         * - Listar todas las áreas incluyendo su relación con la sede.
+         * - Buscar áreas por nombre.
+         * - Obtener una área específica por ID.
+         * - Registrar o actualizar datos de un área.
+         * - Eliminar un área del sistema.
+         * 
+         * RELACIONES:
+         * - FK con la entidad "Sede"
+         * - 1:N con Inventario, Usuario, Informes y Asignar
+         * 
+         * BUENAS PRÁCTICAS UTILIZADAS:
+         * - Manejo controlado de errores con try-catch
+         * - Inclusión explícita de relaciones (Include / Include("Sede"))
+         * - Uso de Entity Framework para el control de estados (Added/Modified/Deleted)
+         * - Patrón de entidad parcial (partial class) para permitir extensiones
+         * 
+         * REQUERIMIENTO FUNCIONAL RELACIONADO:
+         * - RF-002 - Gestión de Áreas en el sistema
+         * 
+         * ------------------------------------------------------------
+         */
+
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Area()
         {

@@ -11,6 +11,40 @@ namespace EFTIC.Models
 {
     public class Reniec
     {
+        /*
+         * ------------------------------------------------------------
+         * CLASE: Reniec.cs
+         * UBICACIÓN: EFTIC.Models
+         * AUTOR: Jesús Leonel Castro Gutiérrez
+         * FECHA DE DESARROLLO: 01/04/2025 al 20/06/2025
+         * 
+         * DESCRIPCIÓN GENERAL:
+         * Esta clase encapsula la lógica de consumo de la API REST pública de RENIEC 
+         * mediante un cliente HTTP. Permite obtener datos de una persona natural 
+         * registrada en RENIEC a partir de su número de DNI.
+         * 
+         * FUNCIONALIDADES IMPLEMENTADAS:
+         * - Consulta de datos personales (nombres y apellidos) mediante número de DNI.
+         * - Uso del paquete `HttpClient` para realizar peticiones RESTful.
+         * - Deserialización de la respuesta JSON usando `Newtonsoft.Json`.
+         * 
+         * MÉTODOS DESTACADOS:
+         * - `ObtenerDatosPorDni(string dni)`: Devuelve una tupla `(Nombre, Apellido)` 
+         *    con los datos asociados al DNI consultado.
+         * 
+         * NOTAS DE IMPLEMENTACIÓN:
+         * - El token API está configurado en el constructor de la clase.
+         * - La clase maneja errores HTTP y de deserialización con manejo de excepciones.
+         * - Requiere tener instalado `Newtonsoft.Json` vía NuGet.
+         * 
+         * REFERENCIAS:
+         * - Documentación oficial de la API: https://apis.net.pe/api-consulta-dni
+         * - Newtonsoft.Json: https://www.newtonsoft.com/json
+         * 
+         * ------------------------------------------------------------
+         */
+
+
         private readonly HttpClient _httpClient;
 
         public Reniec(HttpClient httpClient)

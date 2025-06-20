@@ -11,6 +11,40 @@ namespace EFTIC.Controllers
 
     public class FallaController : Controller
     {
+        /*
+         * ------------------------------------------------------------
+         * CONTROLADOR: FallaController.cs
+         * PROPÓSITO: Gestiona las operaciones CRUD para el registro de fallas.
+         * AUTOR: Jesús Leonel Castro Gutiérrez
+         * FECHA DE DESARROLLO: 01/09/2024 al 15/06/2025
+         * 
+         * DESCRIPCIÓN GENERAL:
+         * Este controlador es responsable de administrar los registros de fallas 
+         * dentro del sistema EFTIC, permitiendo registrar, visualizar, buscar, 
+         * modificar y eliminar incidencias técnicas o fallos relacionados al inventario.
+         * 
+         * FUNCIONALIDADES:
+         * - Listar todas las fallas registradas.
+         * - Buscar fallas según un criterio de texto.
+         * - Visualizar el detalle de una falla específica.
+         * - Agregar nuevas fallas o editar registros existentes.
+         * - Eliminar una falla del sistema.
+         * 
+         * BUENAS PRÁCTICAS IMPLEMENTADAS:
+         * - Seguridad mediante el atributo [Authorize] para proteger el acceso.
+         * - Validación del modelo antes de guardar la información.
+         * - Uso de TempData para mostrar mensajes de confirmación al usuario.
+         * - Separación clara de responsabilidades en métodos individuales.
+         * - Reutilización de vistas (AgregarEditar) para reducir duplicación.
+         * 
+         * NOTAS:
+         * - El modelo `Falla` debe tener implementados los métodos: Listar(), Buscar(), Obtener(), Guardar() y Eliminar().
+         * - Para futuras mejoras, se recomienda utilizar una capa de servicios o repositorios 
+         *   para separar la lógica de negocio del controlador.
+         * ------------------------------------------------------------
+         */
+
+
         private Falla objfalla = new Falla();
 
         public ActionResult Index(string criterio)

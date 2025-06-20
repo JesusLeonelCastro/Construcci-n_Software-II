@@ -11,6 +11,40 @@ namespace EFTIC.Controllers
 
     public class OtrasController : Controller
     {
+        /*
+         * ------------------------------------------------------------
+         * CONTROLADOR: OtrasController.cs
+         * PROPÓSITO: Gestionar actividades adicionales relacionadas al soporte técnico informático.
+         * AUTOR: Jesús Leonel Castro Gutiérrez
+         * FECHA DE DESARROLLO: 01/09/2024 al 15/06/2025
+         * 
+         * DESCRIPCIÓN GENERAL:
+         * Este controlador permite administrar el catálogo de *otras actividades* realizadas 
+         * durante los procesos de soporte técnico que no necesariamente están vinculadas a fallas 
+         * directas o incidencias críticas. Las actividades pueden incluir mantenimientos, configuraciones, 
+         * capacitaciones u otros apoyos técnicos.
+         * 
+         * FUNCIONALIDADES:
+         * - Listar todas las actividades registradas.
+         * - Buscar actividades por criterio de texto.
+         * - Ver detalles de una actividad específica.
+         * - Agregar o editar actividades (formulario compartido).
+         * - Eliminar registros de actividades.
+         * 
+         * BUENAS PRÁCTICAS IMPLEMENTADAS:
+         * - Estructura MVC clara y mantenible.
+         * - Validación de modelo antes de guardar datos.
+         * - Notificaciones al usuario con `TempData`.
+         * - Uso de rutas amigables y limpias para mantener coherencia en la navegación.
+         * 
+         * NOTAS:
+         * - Este catálogo es fundamental para el llenado automático del módulo de informes técnicos.
+         * - Puede integrarse un control de uso para verificar qué informes están asociados a una actividad.
+         * - Recomendable usar una vista de tipo tabla con opciones de ordenamiento y filtros.
+         * 
+         * ------------------------------------------------------------
+         */
+
         private O_Actividades objo_Actividades = new O_Actividades();
 
         public ActionResult Index(string criterio)
